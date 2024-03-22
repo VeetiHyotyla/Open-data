@@ -5,8 +5,9 @@ n3pite00, Teemu Piipponen<br />
 
 EliasIinatti, Elias Iinatti<br />
 
-TeemuVahakuopus, Teemu Vähäkuopus
+TeemuVahakuopus, Teemu Vähäkuopus<br />
 
+VeetiHyotyla, Veeti Hyötylä
 ## Hacknplan
 
 [Hacknplan](https://app.hacknplan.com/p/202254/dashboards/project/)
