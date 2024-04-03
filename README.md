@@ -8,6 +8,8 @@ EliasIinatti, Elias Iinatti<br />
 TeemuVahakuopus, Teemu Vähäkuopus<br />
 
 VeetiHyotyla, Veeti Hyötylä
+
+KilpiRon, Roni Kilpinen
 ## Hacknplan
 
 [Hacknplan](https://app.hacknplan.com/p/202254/dashboards/project/)
