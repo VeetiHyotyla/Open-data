@@ -16,4 +16,15 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    background-color: #AB5754;
+    height: 11em;
+}
+
+footer h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer h4 {
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
 }
