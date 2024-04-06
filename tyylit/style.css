@@ -35,3 +35,31 @@ footer h5 {
 footer i {
     position: fixed;
 }
+header {
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    flex: 1.5;
+}
+
+.logo img {
+    width: auto;
+    height: auto;
+    display: flex;
+    min-width: 100px; 
+    position: fixed;
+}
+.header {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
