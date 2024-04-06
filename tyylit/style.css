@@ -16,12 +16,14 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color: #AB5754;
+    background-color:#787878;
     height: 11em;
 }
 
-footer h3 {
+footer p {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    bottom: 200em;
 }
 
 footer h5 {
@@ -32,6 +34,9 @@ footer h5 {
     left: 42%;
     top: 10%
 }
-footer i {
-    position: fixed;
+
+img {
+    width: 5em;
+    text-align: left;
+    justify-content: space-between;
 }
