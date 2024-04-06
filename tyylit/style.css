@@ -23,7 +23,6 @@ footer {
 footer p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
-    bottom: 200em;
 }
 
 footer h5 {
@@ -35,8 +34,36 @@ footer h5 {
     top: 10%
 }
 
-img {
+footer img {
     width: 5em;
     text-align: left;
     justify-content: space-between;
+}
+header {
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    flex: 1.5;
+}
+
+.logo img {
+    width: auto;
+    height: auto;
+    display: flex;
+    min-width: 100px; 
+    position: fixed;
+}
+.header {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
 }
