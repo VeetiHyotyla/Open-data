@@ -15,16 +15,18 @@ li a:hover {
 footer {
     position: fixed;
     width: 100%;
+    left: 0;
     bottom: 0;
     background-color:#787878;
-    height: 11em;
+    height: 14em;
+    padding: 20px;
 }
 
 footer p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
 }
 
 footer h5 {
@@ -32,32 +34,32 @@ footer h5 {
     position: absolute;
     bottom: 0;
     right: 42em;
-    bottom: 5em;
+    bottom: 6em;
 }
 
  
 footer .twitter-x {
     position: absolute;
     right: 65em;
-    top: 6em;
+    top: 8em;
 }
 
 footer .instagram {
     position: absolute;
     right: 61.5em;
-    top: 6em;
+    top: 8em;
 }
 
 footer .meta {
     position: absolute;
     right: 58em;
-    top: 6em;
+    top: 8em;
 }
 
 footer .github {
     position: absolute;
     right: 54.5em;
-    top: 6em;
+    top: 8em;
 }
 
 footer .logo-matikka {
@@ -66,6 +68,19 @@ footer .logo-matikka {
     
 }
 
+form {
+    width:250px;
+    height: 220px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 11px;
+}
+
+form .move-button {
+    position: absolute;
+    bottom: 0em;
+    left: -8em;
+}
 
 header {
     display: flex;
