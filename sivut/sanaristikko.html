@@ -8,15 +8,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="npm i bootstrap-icons">
-  <link rel="stylesheet" href="../tyylit/style.css">
+  <link rel="stylesheet" href="../tyylit/sanaristikko.css">
 </head>
 
 <body>
-  <header class="container">
-    <div class="logo">
-      <img src="../tyylit/Logo matikkaprojekti.png" alt="Logo">
-    </div>
-  </header>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="../tyylit/Logo matikkaprojekti.png" alt="Logo">
+      </div>
+      <div class="header">
+        <h1>Etusivu</h1>
+      </div>
+    </header>
+  </div>
 
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -50,29 +55,38 @@
       </div>
     </div>
   </nav>
-
-  <div class="content">
-    <div class="redelement">
-      <h1>Tervetuloa testaamaan
-        matematiikka taitojasi!</h1><br><br>
-        <p>Hauskoja matematiikkatehtäviä peruskoululaisille tai muille haluakkaile <br>jotka haluavat haastaa itseänsä ja taitojansa</p><br><br>
-      <a class="btn btn-dark btn-lg" href="../sivut/sanaristikko.html" role="button">Aloita tästä!</a>
-    </div>
   </div>
 
-  <h1 class="text-md-left">Mistä on kyse?</h1><br>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At similique modi sed perspiciatis <br>
-   Minima, doloremque! Dolorum repudiandae cupiditate, consequatur aliquid labore laboriosam nisi ad modi qui cum corporis perferendis.</p>
+  <div class="row col-4 lg-6">
+    <div id="crossword">
+        <table>
+            <tr>
+                <td class="ruutu">1</td>
+                <td class="ruutu">1</td>
+                <td class="ruutu">1</td>
+                <td class="ruutu">1</td>
+                <td class="ruutu">1</td>
+            </tr>
+            <tr>
+                <td class="ruutu">2</td>
+                <td class="ruutu">2</td>
+                <td class="ruutu">2</td>
+                <td class="ruutu">2</td>
+                <td class="ruutu">2</td>
+            </tr>
+            <tr>
+                <td class="ruutu">3</td>
+                <td class="black">3</td>
+                <td class="ruutu">3</td>
+                <td class="black">3</td>
+                <td class="ruutu">3</td>
+            </tr>
+        </table>
+    </div>
 
-   <div class="harmaa">
-      <div class="text-md-left">
-        <h1>Keitä olemme?</h1><br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
-          Atque omnis quo placeat dolor ab ullam. Dicta ipsa facilis neque, deserunt, nam officia placeat alias minima necessitatibus, <br>
-          eligendi nisi eum maxime.</p>
-        
-      </div>
-   </div>
+    <label>Guess word</label>
+    <input id="wordguess"><br>
+    <button id="wordsubmit">submit</button>
 
     <footer class="container-fluid">
       <div class="row">
@@ -112,9 +126,11 @@
             </div>
           </div>
         </div>
+      </div>
+    </footer>
     <div class="row">
       <div class="col-md-12">
-        <form class="position-absolute bottom-0 end-0 p-3">
+        <form class="position-fixed bottom-0 end-0 p-3">
           <div class="mb-3">
             <label for="Email" class="form-label">Sähköposti</label>
             <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
@@ -134,7 +150,6 @@
         </form>
       </div>
     </div>
-  </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
