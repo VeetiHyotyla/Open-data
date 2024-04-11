@@ -23,8 +23,11 @@ footer {
 }
 
 #peli {
-    position:absolute;
-    left: 20px;
+    width: 550px;
+    position:fixed;
+    left: 75em;
+    top: 17em;
+
 }
 
 footer p {
