@@ -59,9 +59,21 @@
     <p>Laskupelin sisältö.</p>
     <main>
       <div class="container border border-dark p-3 rounded border border-4" id="peli">
-        <p>Tässä pelissä pelaajan täytyy laskea yksinkertaisia plus, miinus ja kertolaskuja.<br>aina kun pelaaja saa vastauksen oikein, saa hän "oikeita vastauksia" kenttään<br>
-        yhden pisteen. Jos vastaus menee väärin, lasketaan se "vääriä vastauksia" osioon.</p>
+        <p>Tässä pelissä pelaajan täytyy laskea yksinkertaisia plus, miinus ja kertolaskuja.<br>aina kun pelaaja saa
+          vastauksen oikein, saa hän "oikeita vastauksia" kenttään<br>
+          yhden pisteen. Jos vastaus menee väärin, lasketaan se "vääriä vastauksia" osioon.</p>
       </div>
+        <form>
+          <div class="container border border-dark p-3 rounded border border-4" id="vastaukset">
+          <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
+          <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
+      </div>
+      <div id="number" class="container">
+        <output id="num1"></output>
+        <output id="num2"></output>
+        <input type="number">
+      </div>
+      </form>
     </main>
     <footer class="container-fluid">
       <div class="row">

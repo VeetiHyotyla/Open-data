@@ -27,7 +27,20 @@ footer {
     position:fixed;
     left: 75em;
     top: 17em;
+}
 
+form #number {
+    position:absolute;
+    right: 27em;
+    bottom: 60em;
+}
+
+form #vastaukset {
+    position:absolute;
+    bottom: 27em;
+    right: 112em;
+    font-size: larger;
+    width: 18em;
 }
 
 footer p {
