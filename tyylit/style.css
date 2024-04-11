@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #AB5754;
+    background-color: #C76B6F;
 }
 
 .navbar a {
@@ -13,13 +13,14 @@ li a:hover {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     width: 100%;
     left: 0;
     bottom: 0;
     background-color:#787878;
     height: 14em;
     padding: 20px;
+    margin-top: auto;
 }
 
 footer p {
@@ -96,6 +97,8 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #C76B6F;
+    
 }
 .logo {
     flex: 1.5;
@@ -113,8 +116,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    
 }
-body {
-    margin: 0;
-    padding: 0;
+
+.redelement {
+    border-radius: 0 0 50% 0;
+    padding: 20px;
+    width: 100%;
+    height: 350px;
+    background-color: #C76B6F;
+}
+
+.content {
+    text-align: center;
+}
+
+.infoa {
+    margin-top: 2em;
+}
+
+.harmaa {
+    padding: 20px;
+    width: 100%;
+    height: 350px;
+    background-color: lightgray;
 }
