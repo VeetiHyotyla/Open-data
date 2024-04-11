@@ -22,6 +22,11 @@ footer {
     padding: 20px;
 }
 
+#peli {
+    position:absolute;
+    left: 20px;
+}
+
 footer p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
@@ -68,11 +73,6 @@ footer .logo-matikka {
     
 }
 
-main .col p {
-    position: absolute;
-    left: 5em;
-    bottom: 43em;
-}
 
 form {
     width:250px;
