@@ -64,8 +64,9 @@ footer .github {
 
 footer .logo-matikka {
     width: 5em;
-    text-align: left;   
+    text-align: left;
 }
+
 
 form {
     width:250px;
@@ -73,12 +74,6 @@ form {
     margin-bottom: 1em;
     margin-top: 1em;
     font-size: 11px;
-}
-
-form .move-button {
-    position: absolute;
-    bottom: 0em;
-    left: -8em;
 }
 
 .uutislomake {
@@ -104,39 +99,24 @@ header {
     width: auto;
     height: auto;
     display: flex;
-    max-width: 100px; 
-    
+    max-width: 100px;
 }
 .header {
     flex: 1;
     display: flex;
     align-items: center;
+    margin-left: auto;
     justify-content: flex-start;
+    position:absolute;
+    left: 53em;
 }
 body {
     margin: 0;
     padding: 0;
 }
 
-#crossword {
-    max-width: 100%;
-    float: left;
-    padding: 20px;
-}
-.ruutu {
-    font-size: 16px;
-    height: 30px;
-    width: 30px;
-    background-color: white;
-    text-align: center;
-    border: 1px solid black;
-}
-
-.black {
-    font-size: 16px;
-    height: 30px;
-    width: 30px;
-    background-color: black;
-    text-align: center;
-    border: 1px solid black;
+form .move-button {
+    position: absolute;
+    bottom: 0em;
+    left: -8em;
 }

@@ -31,14 +31,14 @@ footer {
 
 form #number {
     position:absolute;
-    right: 27em;
-    bottom: 60em;
+    right: 26em;
+    bottom: 63em;
 }
 
 form #vastaukset {
     position:absolute;
     bottom: 27em;
-    right: 112em;
+    right: 120em;
     font-size: larger;
     width: 18em;
 }
@@ -86,7 +86,6 @@ footer .github {
 footer .logo-matikka {
     width: 5em;
     text-align: left;
-    
 }
 
 
@@ -127,14 +126,16 @@ header {
     width: auto;
     height: auto;
     display: flex;
-    min-width: 100px; 
-    position: fixed;
+    max-width: 100px;
 }
 .header {
-    flex: 2;
+    flex: 1;
     display: flex;
     align-items: center;
     margin-left: auto;
+    justify-content: flex-start;
+    position:absolute;
+    left: 53em;
 }
 body {
     margin: 0;
