@@ -62,16 +62,17 @@
           vastauksen oikein, saa hän "oikeita vastauksia" kenttään<br>
           yhden pisteen. Jos vastaus menee väärin, lasketaan se "vääriä vastauksia" osioon.</p>
       </div>
-        <form>
+        <form id="game">
           <div class="container border border-dark p-3 rounded border border-4" id="vastaukset">
           <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
           <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
       </div>
       <div id="number" class="container">
         <output id="num1"></output>
+        <output id="operator"></output>
         <output id="num2"></output>
-        <input type="number">
-        <button id="submit">submit</button>
+        <input type="number" id="answer">
+        <button type="button" id="submit">submit</button>
       </div>
       </form>
     </main>
@@ -140,5 +141,6 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="/TIK23_web_1/ohjelmointi/laskupeli.js"></script>
 
 </html>
