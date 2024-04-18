@@ -1,5 +1,3 @@
-let num1 = 0
-let num2 = 0
 let correctCount = 0
 let incorrectCount = 0
 
@@ -8,7 +6,7 @@ const getRandomIntNumberInRange = (min, max) => {
 }
 
 function RandomOperator() {
-    let operators = ["+", "-", "*", "x"]
+    let operators = ["+", "-", "*"]
     let randomIndex = Math.floor(Math.random() * operators.length)
     return operators[randomIndex]
 }
@@ -20,7 +18,6 @@ function Calculate(operator, num1, num2) {
         case "-":
             return num1 - num2
         case "*":
-        case "x":
             return num1 * num2
         default:
             return NaN
@@ -28,6 +25,7 @@ function Calculate(operator, num1, num2) {
 }
 
 function startGame() {
+    document.getElementById("answer").value = "";
     let num1 = getRandomIntNumberInRange(1, 11)
     let num2 = getRandomIntNumberInRange(1, 11)
     let operator = RandomOperator()
@@ -35,8 +33,8 @@ function startGame() {
     document.getElementById("num2").textContent = num2
     document.getElementById("operator").textContent = operator
 
-    let result = Calculate(operator, num1, num2)
-    let input = document.getElementById("answer").value
+    let result = Calculate(operator, num1, num2);
+    let input = parseInt(document.getElementById("answer").value)
 
     if (Number(input) === result) {
         alert("Oikein!")
@@ -48,4 +46,8 @@ function startGame() {
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
     }
 }
-document.addEventListener("DOMContentLoaded", startGame);
+
+document.getElementById("submit").addEventListener("click", function(event) {
+    event.preventDefault();
+    startGame();
+});
