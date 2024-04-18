@@ -89,7 +89,7 @@ footer .logo-matikka {
 }
 
 
-form {
+#game {
     width:250px;
     height: 220px;
     margin-bottom: 1em;
@@ -101,6 +101,10 @@ form .move-button {
     position: absolute;
     bottom: 0em;
     left: -8em;
+}
+
+#number {
+    position: absolute;
 }
 
 .uutislomake {
