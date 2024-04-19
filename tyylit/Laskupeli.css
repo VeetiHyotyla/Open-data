@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #AB5754;
+    background-color:#C76B6F;
 }
 
 .navbar a {
@@ -20,13 +20,17 @@ footer {
     background-color:#787878;
     height: 14em;
     padding: 20px;
+    margin-top: auto;
 }
 
 #peli {
     width: 550px;
+    height: 250px;
     position:fixed;
-    left: 75em;
-    top: 17em;
+    left: 5em;
+    top: 14em;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form #number {
@@ -97,14 +101,26 @@ footer .logo-matikka {
     font-size: 11px;
 }
 
+form {
+    width:250px;
+    height: 220px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 11px;
+}
+
 form .move-button {
     position: absolute;
-    bottom: 0em;
+    bottom: 1em;
     left: -8em;
 }
 
 #number {
     position: absolute;
+    left: 3em;
+    top: 20em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:larger;
 }
 
 .uutislomake {
@@ -116,6 +132,7 @@ form .move-button {
 }
 
 header {
+    background-color: #C76B6F;
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -134,7 +151,7 @@ header {
 }
 .header {
     flex: 1;
-    display: flex;
+    display:flex;
     align-items: center;
     margin-left: auto;
     justify-content: flex-start;

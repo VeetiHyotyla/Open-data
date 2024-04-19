@@ -58,21 +58,22 @@
   <div id="content">
     <main>
       <div class="container border border-dark p-3 rounded border border-4" id="peli">
-        <p>Tässä pelissä pelaajan täytyy laskea yksinkertaisia plus, miinus ja kertolaskuja.<br>aina kun pelaaja saa
-          vastauksen oikein, saa hän "oikeita vastauksia" kenttään<br>
-          yhden pisteen. Jos vastaus menee väärin, lasketaan se "vääriä vastauksia" osioon.</p>
+        <p>Tässä pelissä pelaajan täytyy laskea yksinkertaisia plus, miinus ja kertolaskuja. aina kun pelaaja saa
+          vastauksen oikein, saa hän "oikeita vastauksia" kenttään yhden pisteen. Jos vastaus menee väärin, 
+          lasketaan se "vääriä vastauksia" osioon. Aloita peli, kun olet valmis!</p>
+        <button type="button" class="btn btn-secondary btn-sm" id="start">Aloita</button>
       </div>
-        <form id="game">
+        <form id="game" style="display: none;">
           <div class="container border border-dark p-3 rounded border border-4" id="vastaukset">
           <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
           <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
       </div>
-      <div id="number" class="container">
+      <div id="number" class="container-fluid">
         <output id="num1"></output>
         <output id="operator"></output>
         <output id="num2"></output>
         <input type="number" id="answer">
-        <button type="button" id="submit">Submit</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="submit">Vastaa</button>
       </div>
       </form>
     </main>
@@ -118,7 +119,7 @@
     </footer>
     <div class="row">
       <div class="col-md-12">
-        <form class="position-fixed bottom-0 end-0 p-3">
+        <form class="position-absolute bottom-0 end-0 p-3">
           <div class="mb-3">
             <label for="Email" class="form-label">Sähköposti</label>
             <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">

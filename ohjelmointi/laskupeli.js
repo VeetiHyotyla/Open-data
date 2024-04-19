@@ -34,8 +34,8 @@ const randomizeNumbers = () => {
     document.getElementById("operator").textContent = operator
 }
 
+
 function startGame() {
-    document.getElementById("answer").value = "";
     randomizeNumbers()
 }
 
@@ -53,8 +53,14 @@ function Lasku() {
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
     }
 
-startGame()
+    randomizeNumbers()
+    document.getElementById("answer").value = ""
 }
 
 document.getElementById("submit").addEventListener("click", Lasku);
-window.onload = startGame
+
+document.getElementById("start").addEventListener("click", function () {
+    document.getElementById("peli").style.display = "none"
+    document.getElementById("game").style.display = "block"
+    startGame()
+})
