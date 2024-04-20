@@ -174,4 +174,12 @@ body {
     color: white;
     text-align: center;
   }
+#pistetaulukko {
+    float: left; /* Sijoitetaan vasemmalle */
+    width: 150px; /* Määritetään leveys */
+  }
   
+#vastauslaatikko {
+    float: right; /* Sijoitetaan oikealle */
+    width: 150px; /* Määritetään leveys */
+  }
