@@ -43,8 +43,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/sivut/sanaristikko.html">Sanaristikko</a></li>
-              <li><a class="dropdown-item" href="#">Toinen tehtävä</a></li>
-              <li><a class="dropdown-item" href="#">Monivalintapeli</a></li>
+              <li><a class="dropdown-item" href="/sivut/Laskupeli.html">Laskupeli</a></li>
+              <li><a class="dropdown-item" href="/sivut/monivalintapeli.html">Monivalintapeli</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -55,22 +55,20 @@
     </div>
   </nav>
   </div>
-  <div id="content">
-    <main>
-        <form id="game" style="display: none;">
-          <div class="container border border-dark p-3 rounded border border-4" id="vastaukset">
-          <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
-          <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
-      </div>
-      <div id="number" class="container-fluid">
-        <output id="num1"></output>
-        <output id="operator"></output>
-        <output id="num2"></output>
-        <input type="number" id="answer">
-        <button type="button" class="btn btn-secondary btn-sm" id="submit">Vastaa</button>
-      </div>
-      </form>
-    </main>
+  <div id="monivalinta">
+    <div id="v1" class="osa">
+      Eka vastaus
+    </div>
+    <div id="v2" class="osa">
+      Toka vastaus
+    </div>
+    <div id="v3" class="osa">
+      Kolmas vastaus
+    </div>
+    <div id="v4" class="osa">
+      Neljäs vastaus
+    </div>
+  </div>
     <footer class="container-fluid">
       <div class="row">
         <div class="col-md-6">

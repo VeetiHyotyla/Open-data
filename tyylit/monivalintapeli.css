@@ -162,3 +162,15 @@ body {
     margin: 0;
     padding: 0;
 }
+#monivalinta {
+    float: left;
+    width: 500px; 
+  }
+  
+  .osa {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #9c9c9c;
+  }
+  
