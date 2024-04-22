@@ -162,3 +162,48 @@ body {
     margin: 0;
     padding: 0;
 }
+#monivalinta {
+    margin: 100px; 
+    width: 500px; 
+  }
+  
+  .osa {
+    border: 2px solid #000;
+    padding: 20px;
+    background-color: #787878;
+    color: white;
+    text-align: center;
+  }
+#pistelaatikko {
+    float: left; 
+    width: 150px; 
+    border: 2px solid #000;
+    color: white;
+    background-color: #787878;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+#vastauslaatikko {
+    float: right; 
+    width: 150px; 
+    border: 2px solid #000;
+    color: white;
+    background-color: #787878;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #kysymyslaatikko {
+    border: 2px solid #000;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: #787878;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
