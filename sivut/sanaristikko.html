@@ -45,7 +45,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="sanaristikko.html">Sanaristikko</a></li>
               <li><a class="dropdown-item" href="Laskupeli.html">Laskupeli</a></li>
-              <li><a class="dropdown-item" href="#">Kolmas</a></li>
+              <li><a class="dropdown-item" href="monivalintapeli.html">Monivalintapeli</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -57,80 +57,194 @@
   </nav>
   </div>
 
-  <div class="row col-4 lg-6">
-    <div id="crossword">
-        <table>
-            <tr>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-            </tr>
-            <tr>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-            </tr>
-            <tr>
-                <td class="ruutu">3</td>
-                <td class="black">3</td>
-                <td class="ruutu">3</td>
-                <td class="black">3</td>
-                <td class="ruutu">3</td>
-            </tr>
-        </table>
+  <h1>Sanaristikko</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="kysymykset">
+          <h2>Kysymykset</h2>
+          <ol>
+            <li>Mikä on toinen nimi jakolaskulle? (8)</li>
+            <li>Mikä on sanojen paikalla? vähennys__ yhteen__ jako__ (5)</li>
+            <li>Termi määrittelevissä olevaan ominaisuuteen matematiikassa (5)</li>
+            <li>Määrällinen suhde lukuun, käytetään merkkiä "%" (9)</li>
+            <li>Luku jota käytetään toistetussa yhteenlaskussa (9)</li>
+            <li>Muoto, jossa kaikki kulmat ovat suoria ja sivut yhtä pitkiä. (5)</li>
+          </ol>
+
+          <label>Guess word</label><br>
+          <input id="wordguess"><br>
+          <button onclick="submit()">submit</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="crossword">
+            <table>
+                <tr>
+                    <td id="a1" class="ruutu"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                </tr>
+                <tr>
+                    <td id="a2" class="ruutu"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td id="c1" class="ruutu"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                </tr>
+                <tr>
+                    <td id="a3" class="ruutu"></td>
+                    <td id="b2" class="ruutu"></td>
+                    <td id="b3" class="ruutu"></td>
+                    <td id="b4" class="ruutu"></td>
+                    <td id="b5" class="ruutu"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                    <td class="white"></td>
+                </tr>
+                <tr>
+                  <td id="a4" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td id="c3" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                </tr>
+                <tr>
+                  <td id="a5" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td id="v1" class="ruutu"></td>
+                  <td id="v2" class="ruutu"></td>
+                  <td id="v3" class="ruutu"></td>
+                  <td id="v4" class="ruutu"></td>
+                  <td id="v5" class="ruutu"></td>
+                  <td id="v6" class="ruutu"></td>
+                  <td id="v7" class="ruutu"></td>
+                  <td id="v8" class="ruutu"></td>
+                </tr>
+                <tr>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td id="c5" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                </tr>
+                <tr>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td id="c6" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                </tr>
+                <tr>
+                  <td id="d1" class="ruutu"></td>
+                  <td id="d2" class="ruutu"></td>
+                  <td id="d3" class="ruutu"></td>
+                  <td id="c7" class="ruutu"></td>
+                  <td id="d4" class="ruutu"></td>
+                  <td id="d5" class="ruutu"></td>
+                  <td id="d6" class="ruutu"></td>
+                  <td id="d7" class="ruutu"></td>
+                  <td id="d8" class="ruutu"></td>
+                  <td class="white"></td>
+                </tr>
+                <tr>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td id="c8" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                </tr>
+                <tr>
+                  <td id="e1" class="ruutu"></td>
+                  <td id="e2" class="ruutu"></td>
+                  <td id="e3" class="ruutu"></td>
+                  <td id="c9" class="ruutu"></td>
+                  <td id="e4" class="ruutu"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                  <td class="white"></td>
+                </tr>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <label>Guess word</label>
-    <input id="wordguess"><br>
-    <button id="wordsubmit">submit</button>
-
-    <footer class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="logo-footer">
-            <div class="logo-matikka">
-              <img src="../tyylit/Logo matikkaprojekti.png" class="img-fluid">
-            </div>
-            <p>Yksinkertaiset ja hauskat matematiikkapelit<br>peruskoululaisille.</p>
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <div class="logo-footer">
+          <div class="logo-matikka">
+            <img src="../tyylit/Logo matikkaprojekti.png" class="img-fluid">
           </div>
+          <p>Yksinkertaiset ja hauskat matematiikkapelit<br>peruskoululaisille.</p>
         </div>
-        <div class="uutislomake">
-          Tilaa myös meidän uutislomake!
-        </div>
-        <div class="col-md-6">
-          <div class="social-media-container">
-            <h5>Seuraa meitä somessa<br>ja tsekkaa meidän github!</h5>
-            <div class="twitter-x" type="button">
-              <a href="https://www.twitter.com">
-                <img src="../tyylit/icons/twitter-x.svg" alt="twitter-x" width="32" height="32">
-              </a>
-            </div>
-            <div class="instagram" type="button">
-              <a href="https://www.instagram.com">
-                <img src="../tyylit/icons/instagram.svg" alt="instagram" width="32" height="32">
-              </a>
-            </div>
-            <div class="meta" type="button">
-              <a href="https://www.facebook.com">
-                <img src="../tyylit/icons/meta.svg" alt="meta" width="32" height="32">
-              </a>
-            </div>
-            <div class="github" type="button">
-              <a href="https://www.github.com">
-                <img src="../tyylit/icons/github.svg" alt="github" width="32" height="32">
-              </a>
-            </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="social-media-container">
+          <h5>Seuraa meitä somessa<br>ja tsekkaa meidän github!</h5>
+          <div class="twitter-x" type="button">
+            <a href="https://www.twitter.com">
+              <img src="../tyylit/icons/twitter-x.svg" alt="twitter-x" width="32" height="32">
+            </a>
+          </div>
+          <div class="instagram" type="button">
+            <a href="https://www.instagram.com">
+              <img src="../tyylit/icons/instagram.svg" alt="instagram" width="32" height="32">
+            </a>
+          </div>
+          <div class="meta" type="button">
+            <a href="https://www.facebook.com">
+              <img src="../tyylit/icons/meta.svg" alt="meta" width="32" height="32">
+            </a>
+          </div>
+          <div class="github" type="button">
+            <a href="https://www.github.com">
+              <img src="../tyylit/icons/github.svg" alt="github" width="32" height="32">
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
     <div class="row">
       <div class="col-md-12">
-        <form class="position-fixed bottom-0 end-0 p-3">
+        <form class="position-absolute bottom-0 end-0 p-3">
           <div class="mb-3">
             <label for="Email" class="form-label">Sähköposti</label>
             <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
@@ -150,7 +264,10 @@
         </form>
       </div>
     </div>
+  </footer>
+
 </body>
+<script src="../ohjelmointi/sanaristikko.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
