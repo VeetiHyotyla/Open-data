@@ -24,11 +24,11 @@ footer {
 }
 
 #peli {
-    width: 550px;
-    height: 250px;
+    width: 650px;
+    height: 240px;
     position:fixed;
-    left: 5em;
-    top: 14em;
+    left: 32em;
+    top: 15em;
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -99,6 +99,10 @@ footer .logo-matikka {
     margin-bottom: 1em;
     margin-top: 1em;
     font-size: 11px;
+}
+
+#taulukko {
+    position: center;
 }
 
 form {

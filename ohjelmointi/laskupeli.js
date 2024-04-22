@@ -46,15 +46,37 @@ function Lasku() {
     if (Number(input) === result) {
         alert("Oikein!")
         correctCount++
-        document.getElementById("oikeatvastaukset").textContent = correctCount;
+        document.getElementById("oikeatvastaukset").textContent = correctCount
+        randomizeNumbers()
+        document.getElementById("answer").value = ""
+
+        if (correctCount === 10) {
+            Vastaukset("Voitit pelin!")
+        }
+
     } else {
         alert("Väärin!")
         incorrectCount++
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
-    }
 
-    randomizeNumbers()
-    document.getElementById("answer").value = ""
+        if (incorrectCount === 3) {
+            Vastaukset("Hävisit pelin.")
+        }
+
+        randomizeNumbers()
+        document.getElementById("answer").value = ""
+    }
+}
+
+function Vastaukset(viesti) {
+    document.getElementById("game").style.display = "none"
+    document.getElementById("taulukko").style.display = "block"
+    document.getElementById("tulos").textContent = viesti
+    document.getElementById("oikeatvastaukset").textContent = correctCount
+    document.getElementById("väärätvastaukset").textContent = incorrectCount
+
+    let pisteet = correctCount - incorrectCount
+    document.getElementById("pisteet").textContent = pisteet
 }
 
 document.getElementById("submit").addEventListener("click", Lasku);
@@ -62,5 +84,9 @@ document.getElementById("submit").addEventListener("click", Lasku);
 document.getElementById("start").addEventListener("click", function () {
     document.getElementById("peli").style.display = "none"
     document.getElementById("game").style.display = "block"
+    correctCount = 0
+    incorrectCount = 0
+    document.getElementById("oikeatvastaukset").textContent = correctCount;
+    document.getElementById("väärätvastaukset").textContent = incorrectCount;
     startGame()
 })
