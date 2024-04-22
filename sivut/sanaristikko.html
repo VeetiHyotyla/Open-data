@@ -61,32 +61,140 @@
     <div id="crossword">
         <table>
             <tr>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
-                <td class="ruutu">1</td>
+                <td id="a1" class="ruutu"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
             </tr>
             <tr>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
-                <td class="ruutu">2</td>
+                <td id="a2" class="ruutu"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="ruutu">p</td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
             </tr>
             <tr>
-                <td class="ruutu">3</td>
-                <td class="black">3</td>
-                <td class="ruutu">3</td>
-                <td class="black">3</td>
-                <td class="ruutu">3</td>
+                <td id="a3" class="ruutu"></td>
+                <td class="ruutu">u</td>
+                <td class="ruutu">u</td>
+                <td class="ruutu">r</td>
+                <td class="ruutu">e</td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
+                <td class="white"></td>
             </tr>
-        </table>
-    </div>
+            <tr>
+              <td id="a4" class="ruutu"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="ruutu">o</td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+            </tr>
+            <tr>
+              <td id="a5" class="ruutu"></td>
+              <td class="white"></td>
+              <td id="v1" class="ruutu"></td>
+              <td id="v2" class="ruutu"></td>
+              <td id="v3" class="ruutu"></td>
+              <td id="v4" class="ruutu"></td>
+              <td id="v5" class="ruutu"></td>
+              <td id="v6" class="ruutu"></td>
+              <td id="v7" class="ruutu"></td>
+              <td id="v8" class="ruutu"></td>
+            </tr>
+            <tr>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="ruutu">e</td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+            </tr>
+            <tr>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="ruutu">n</td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+            </tr>
+            <tr>
+              <td class="ruutu">k</td>
+              <td class="ruutu">e</td>
+              <td class="ruutu">r</td>
+              <td class="ruutu">t</td>
+              <td class="ruutu">o</td>
+              <td class="ruutu">l</td>
+              <td class="ruutu">u</td>
+              <td class="ruutu">k</td>
+              <td class="ruutu">u</td>
+              <td class="white"></td>
+            </tr>
+            <tr>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="ruutu">t</td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+            </tr>
+            <tr>
+              <td class="ruutu">n</td>
+              <td class="ruutu">e</td>
+              <td class="ruutu">l</td>
+              <td class="ruutu">i</td>
+              <td class="ruutu">ö</td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+              <td class="white"></td>
+            </tr>
+      </table>
+  </div>
 
-    <label>Guess word</label>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 text-md-right">
+        <p>1. Mikä on toinen nimi jakolaskulle?</p>
+        <p>2. </p>
+      </div>
+    </div>
+  </div>
+
+    <label>Guess word</label><br>
     <input id="wordguess"><br>
-    <button id="wordsubmit">submit</button>
+    <button>submit</button>
 
     <footer class="container-fluid">
       <div class="row">
@@ -151,6 +259,7 @@
       </div>
     </div>
 </body>
+<script src="../ohjelmointi/sanaristikko.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
