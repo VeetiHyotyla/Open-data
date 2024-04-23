@@ -62,3 +62,28 @@ const Peruskysymykset = [
       }; 
     resetAnswerSelection();  
 } 
+function checkAnswer() { 
+    const Olevakysymys = Peruskysymykset[OlevakysymysIndex]; 
+    if (selectedAnswerIndex === Olevakysymys.correctAnswerIndex) { 
+      score++;  
+    } 
+    OlevakysymysIndex++;  
+    if (OlevakysymysIndex < Peruskysymykset.length) { 
+      loadQuestion();  
+    } else { 
+      const pisteLaatikko = document.getElementById("pistelaatikko"); 
+      pisteLaatikko.innerHTML = `Sait ${score} / ${Peruskysymykset.length} oikein.`; 
+
+      const vastausButton = document.getElementById("vastauslaatikko").querySelector("button"); 
+      vastausButton.innerHTML = "Aloita uudelleen";  
+      vastausButton.onclick = initializeQuiz;  
+    } 
+    selectedAnswerIndex = -1; 
+  } 
+  function resetAnswerSelection() { 
+    for (let i = 1; i <= 4; i++) { 
+      const button = document.getElementById(`v${i}`).querySelector("button"); 
+      button.style.backgroundColor = "";  
+    } 
+  } 
+  initializeQuiz(); 
