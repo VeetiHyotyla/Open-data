@@ -51,7 +51,7 @@ function Lasku() {
         document.getElementById("answer").value = ""
 
         if (correctCount === 10) {
-            Vastaukset("Voitit pelin!")
+            Pelipiste()
         }
 
 
@@ -60,12 +60,20 @@ function Lasku() {
         incorrectCount++
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
 
-        if (incorrectCount === 10 && correctCount - incorrectCount >= 5) {
-            return Vastaukset("Hävisit pelin.")
+        if (incorrectCount === 10) {
+            Pelipiste()
         }
 
         randomizeNumbers()
         document.getElementById("answer").value = ""
+    }
+}
+
+function Pelipiste() {
+    if (incorrectCount >= 5) {
+        Vastaukset("Hävisit pelin.")
+    } else {
+        Vastaukset("Voitit pelin!")
     }
 }
 
