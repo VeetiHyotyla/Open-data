@@ -60,7 +60,7 @@ function Lasku() {
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
 
         if (incorrectCount === 3) {
-            Vastaukset("Hävisit pelin.")
+            return Vastaukset("Hävisit pelin.")
         }
 
         randomizeNumbers()
@@ -69,14 +69,16 @@ function Lasku() {
 }
 
 function Vastaukset(viesti) {
-    document.getElementById("game").style.display = "none"
+    document.getElementById("laskut").style.display = "none"
+    document.getElementById("number").style.display = "none"
     document.getElementById("taulukko").style.display = "block"
     document.getElementById("tulos").textContent = viesti
-    document.getElementById("oikeatvastaukset").textContent = correctCount
-    document.getElementById("väärätvastaukset").textContent = incorrectCount
+    document.getElementById("oikeat").textContent = correctCount
+    document.getElementById("väärät").textContent = incorrectCount
 
     let pisteet = correctCount - incorrectCount
     document.getElementById("pisteet").textContent = pisteet
+
 }
 
 document.getElementById("submit").addEventListener("click", Lasku);
