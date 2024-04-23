@@ -25,3 +25,40 @@ const Peruskysymykset = [
       correctAnswerIndex: 0, 
     }, 
   ]; 
+  let OlevakysymysIndex = 0; 
+  let selectedAnswerIndex = -1; 
+  let score = 0; 
+
+  function initializeQuiz() { 
+    OlevakysymysIndex = 0; 
+    selectedAnswerIndex = -1; 
+    score = 0; 
+
+    loadQuestion(); 
+  } 
+  function loadQuestion() { 
+    const currentQuestion = Peruskysymykset[OlevakysymysIndex]; 
+    const kysymysLaatikko = document.getElementById("kysymyslaatikko"); 
+    const vastausLaatikko = document.getElementById("vastauslaatikko"); 
+    const pisteLaatikko = document.getElementById("pistelaatikko");
+   
+    kysymysLaatikko.innerHTML = currentQuestion.question; 
+
+    for (let i = 1; i <= 4; i++) { 
+      const button = document.getElementById(`v${i}`).querySelector("button"); 
+      button.innerHTML = currentQuestion.options[i - 1]; 
+      button.onclick = () => { 
+        selectedAnswerIndex = i - 1; 
+        resetAnswerSelection(); 
+        button.style.backgroundColor = "white"; 
+      }; 
+    }  
+    vastausLaatikko.querySelector("button").onclick = () => { 
+        if (selectedAnswerIndex === -1) { 
+          alert("Valitse vastaus ensin."); 
+        } else { 
+          checkAnswer(); 
+        } 
+      }; 
+    resetAnswerSelection();  
+} 
