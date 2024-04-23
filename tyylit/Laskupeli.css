@@ -23,9 +23,17 @@ footer {
     margin-top: auto;
 }
 
+#s-posti-kenttä {
+    width:250px;
+    height: 220px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 11px;
+}
+
 #peli {
     width: 650px;
-    height: 240px;
+    height: 250px;
     position: fixed;
     left: 32em;
     top: 15em;
@@ -34,15 +42,17 @@ footer {
 }
 
 #laskut {
-    position: fixed;
-    bottom: 15em;
-    left: 5em;
+    position: absolute;
+    width: 25em;
+    bottom: 14.5em;
+    left: 46em;
+    text-align: center;
 }
 
 #number {
     position: absolute;
-    left: 3em;
-    top: 20em;
+    left: 38em;
+    top: 17em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
 }

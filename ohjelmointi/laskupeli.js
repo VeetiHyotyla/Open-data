@@ -54,12 +54,13 @@ function Lasku() {
             Vastaukset("Voitit pelin!")
         }
 
+
     } else {
         alert("Väärin!")
         incorrectCount++
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
 
-        if (incorrectCount === 3) {
+        if (incorrectCount === 10 && correctCount - incorrectCount >= 5) {
             return Vastaukset("Hävisit pelin.")
         }
 
