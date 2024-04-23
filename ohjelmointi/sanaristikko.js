@@ -1,9 +1,27 @@
 const input = document.getElementById('wordguess')
 const sanalista = ["osamäärä", "lasku", "suure", "prosentti", "kertoluku", "neliö"]
+let score = 0
+let pisteytetty = []
 
 function submit() {
     var veikkaus = input.value.toLowerCase()
 
+    // pisteytys ja tarkistus onko sanaa jo pisteytetty
+
+    if (pisteytetty.includes(veikkaus)) {
+        alert("Olet jo vastannut sanan!")
+
+    } else if (sanalista.includes(veikkaus)) {
+        score++
+        scoreUpdate()
+        pisteytetty.push(veikkaus);
+
+    // Huomautetaan, jos sana on väärin
+
+    } else if (!sanalista.includes(veikkaus))
+        alert("Sana ei ole sanaristikossa!")
+
+    // sanaristikon toimivuus ja output ristikkoon
     if (veikkaus === sanalista[0]) {
         document.getElementById('v1').innerHTML = "o";
         document.getElementById('v2').innerHTML = "s";
@@ -39,7 +57,7 @@ function submit() {
         document.getElementById('d1').innerHTML = "k";
         document.getElementById('d2').innerHTML = "e";
         document.getElementById('d3').innerHTML = "r";
-        document.getElementById('c8').innerHTML = "t";
+        document.getElementById('c7').innerHTML = "t";
         document.getElementById('d4').innerHTML = "o";
         document.getElementById('d5').innerHTML = "l";
         document.getElementById('d6').innerHTML = "u";
@@ -48,8 +66,17 @@ function submit() {
     } else if (veikkaus === sanalista[5]) {
         document.getElementById('e1').innerHTML = "n";
         document.getElementById('e2').innerHTML = "e";
-        document.getElementById('c9').innerHTML = "l";
-        document.getElementById('e3').innerHTML = "i";
+        document.getElementById('e3').innerHTML = "l";
+        document.getElementById('c9').innerHTML = "i";
         document.getElementById('e4').innerHTML = "ö";
+    }
+}
+
+// pisteytyksen päivitys ja tarkistetaan onko peli voitettu
+
+function scoreUpdate() {
+    document.getElementById('tulos').innerHTML = score
+    if (score == 6) {
+        alert("Onneksi olkoon, sait sanaristikon tehtyä!")
     }
 }
