@@ -1,11 +1,11 @@
 .navbar {
-    background-color:#C76B6F;
+    background-color: #C76B6F;
 }
 
 .navbar a {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: 1em; 
+    margin-right: 1em;
 }
 
 li a:hover {
@@ -17,7 +17,7 @@ footer {
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color:#787878;
+    background-color: #787878;
     height: 14em;
     padding: 20px;
     margin-top: auto;
@@ -26,25 +26,32 @@ footer {
 #peli {
     width: 650px;
     height: 240px;
-    position:fixed;
+    position: fixed;
     left: 32em;
     top: 15em;
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form #number {
-    position:absolute;
-    right: 26em;
-    bottom: 63em;
+#laskut {
+    position: fixed;
+    bottom: 15em;
+    left: 5em;
 }
 
-form #vastaukset {
-    position:absolute;
-    bottom: 27em;
-    right: 120em;
+#number {
+    position: absolute;
+    left: 3em;
+    top: 20em;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
-    width: 18em;
+}
+
+#taulukko {
+    position: absolute;
+    left:36em;
+    width: 50em;
+    bottom: 30em;
 }
 
 footer p {
@@ -62,7 +69,7 @@ footer h5 {
     bottom: 6em;
 }
 
- 
+
 footer .twitter-x {
     position: absolute;
     right: 65em;
@@ -92,44 +99,15 @@ footer .logo-matikka {
     text-align: left;
 }
 
-
-#game {
-    width:250px;
-    height: 220px;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    font-size: 11px;
-}
-
-#taulukko {
-    position: center;
-}
-
-form {
-    width:250px;
-    height: 220px;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    font-size: 11px;
-}
-
 form .move-button {
     position: absolute;
     bottom: 1em;
     left: -8em;
 }
 
-#number {
-    position: absolute;
-    left: 3em;
-    top: 20em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:larger;
-}
-
 .uutislomake {
     font-family: Arial, Helvetica, sans-serif;
-    position:absolute;
+    position: absolute;
     right: -64em;
     font-size: larger;
     bottom: 8em;
@@ -143,6 +121,7 @@ header {
     margin: 0;
     padding: 0;
 }
+
 .logo {
     flex: 1.5;
 }
@@ -153,15 +132,17 @@ header {
     display: flex;
     max-width: 100px;
 }
+
 .header {
     flex: 1;
-    display:flex;
+    display: flex;
     align-items: center;
     margin-left: auto;
     justify-content: flex-start;
-    position:absolute;
+    position: absolute;
     left: 53em;
 }
+
 body {
     margin: 0;
     padding: 0;
