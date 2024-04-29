@@ -92,6 +92,13 @@ function Vastaukset(viesti) {
 
 document.getElementById("submit").addEventListener("click", Lasku);
 
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        Lasku()
+    }
+})
+
 document.getElementById("start").addEventListener("click", function () {
     document.getElementById("peli").style.display = "none"
     document.getElementById("game").style.display = "block"
