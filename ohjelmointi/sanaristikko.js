@@ -3,11 +3,27 @@ const sanalista = ["osamäärä", "lasku", "suure", "prosentti", "kertoluku", "n
 let score = 0
 let pisteytetty = []
 
+
+// Pisteytyksen tallennus
+if (localStorage.getItem('score') !== null) {
+    score = parseInt(localStorage.getItem('score'))
+    document.getElementById('tulos').innerHTML = score
+} 
+
+// Sanojen tallennus ja niiden takaisin lataus
+if (localStorage.getItem('pisteytetty') !== null) {
+    pisteytetty = JSON.parse(localStorage.getItem('pisteytetty'))
+    for (let i = 0; i < pisteytetty.length; i++) {
+        main(pisteytetty[i])
+    }
+}
+
+
 function submit() {
+
     var veikkaus = input.value.toLowerCase()
 
     // pisteytys ja tarkistus onko sanaa jo pisteytetty
-
     if (pisteytetty.includes(veikkaus)) {
         alert("Olet jo vastannut sanan!")
 
@@ -15,13 +31,23 @@ function submit() {
         score++
         scoreUpdate()
         pisteytetty.push(veikkaus);
+        main(veikkaus)
+        // Pisteiden ja sanojen tallennus
+        localStorage.setItem('pisteytetty', JSON.stringify(pisteytetty))
+        localStorage.setItem('score', score);
 
     // Huomautetaan, jos sana on väärin
 
     } else if (!sanalista.includes(veikkaus))
         alert("Sana ei ole sanaristikossa!")
+    
+    main()
 
-    // sanaristikon toimivuus ja output ristikkoon
+}
+
+// sanaristikon toimivuus ja output ristikkoon
+
+function main(veikkaus) {
     if (veikkaus === sanalista[0]) {
         document.getElementById('v1').innerHTML = "o";
         document.getElementById('v2').innerHTML = "s";
@@ -39,10 +65,10 @@ function submit() {
         document.getElementById('a5').innerHTML = "u";
     } else if (veikkaus === sanalista[2]) {
         document.getElementById('a3').innerHTML = "s";
+        document.getElementById('b1').innerHTML = "u";
         document.getElementById('b2').innerHTML = "u";
-        document.getElementById('b3').innerHTML = "u";
-        document.getElementById('b4').innerHTML = "r";
-        document.getElementById('b5').innerHTML = "e";
+        document.getElementById('b3').innerHTML = "r";
+        document.getElementById('b4').innerHTML = "e";
     } else if (veikkaus === sanalista[3]) {
         document.getElementById('c1').innerHTML = "p";
         document.getElementById('b4').innerHTML = "r";
@@ -79,4 +105,11 @@ function scoreUpdate() {
     if (score == 6) {
         alert("Onneksi olkoon, sait sanaristikon tehtyä!")
     }
+}
+
+// Tallennuksen tyhjennys
+
+function tyhjennys() {
+    localStorage.clear()
+    location.reload()
 }

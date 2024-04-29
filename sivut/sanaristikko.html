@@ -72,13 +72,16 @@
           <label>Guess word</label><br>
           <input id="wordguess"><br>
           <button onclick="submit()">submit</button>
+
+          <button onclick="tyhjennys()">clear</button>
         </div>
       </div>
       <div class="col-md-6">
         <div id="crossword">
             <table>
                 <tr>
-                    <td id="a1" class="ruutu"></td>
+                    <td id="a1" class="ruutu">
+                      <span class="aloitus">2</td>
                     <td class="white"></td>
                     <td class="white"></td>
                     <td class="white"></td>
@@ -93,7 +96,8 @@
                     <td id="a2" class="ruutu"></td>
                     <td class="white"></td>
                     <td class="white"></td>
-                    <td id="c1" class="ruutu"></td>
+                    <td id="c1" class="ruutu">
+                      <span class="aloitus">4</td>
                     <td class="white"></td>
                     <td class="white"></td>
                     <td class="white"></td>
@@ -102,11 +106,12 @@
                     <td class="white"></td>
                 </tr>
                 <tr>
-                    <td id="a3" class="ruutu"></td>
+                    <td id="a3" class="ruutu">
+                      <span class="aloitus">3</td>
+                    <td id="b1" class="ruutu"></td>
                     <td id="b2" class="ruutu"></td>
                     <td id="b3" class="ruutu"></td>
                     <td id="b4" class="ruutu"></td>
-                    <td id="b5" class="ruutu"></td>
                     <td class="white"></td>
                     <td class="white"></td>
                     <td class="white"></td>
@@ -128,7 +133,8 @@
                 <tr>
                   <td id="a5" class="ruutu"></td>
                   <td class="white"></td>
-                  <td id="v1" class="ruutu"></td>
+                  <td id="v1" class="ruutu">
+                    <span class="aloitus">1</td>
                   <td id="v2" class="ruutu"></td>
                   <td id="v3" class="ruutu"></td>
                   <td id="v4" class="ruutu"></td>
@@ -162,7 +168,8 @@
                   <td class="white"></td>
                 </tr>
                 <tr>
-                  <td id="d1" class="ruutu"></td>
+                  <td id="d1" class="ruutu">
+                    <span class="aloitus">5</td>
                   <td id="d2" class="ruutu"></td>
                   <td id="d3" class="ruutu"></td>
                   <td id="c7" class="ruutu"></td>
@@ -186,7 +193,8 @@
                   <td class="white"></td>
                 </tr>
                 <tr>
-                  <td id="e1" class="ruutu"></td>
+                  <td id="e1" class="ruutu">
+                    <span class="aloitus">6</td>
                   <td id="e2" class="ruutu"></td>
                   <td id="e3" class="ruutu"></td>
                   <td id="c9" class="ruutu"></td>
@@ -207,65 +215,65 @@
       <output id="kokotulos">/ 6</output>
     </div>
 
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 col-lg-6">
-        <div class="logo-footer">
-          <div class="logo-matikka">
-            <img src="../tyylit/Logo matikkaprojekti.png" class="img-fluid">
-          </div>
-          <p>Yksinkertaiset ja hauskat matematiikkapelit<br>peruskoululaisille.</p>
-        </div>
-      </div>
-      <div class="col-md-6 ">
-        <div class="social-media-container">
-          <h5>Seuraa meitä somessa<br>ja tsekkaa meidän github!</h5>
-          <div class="twitter-x" type="button">
-            <a href="https://www.twitter.com">
-              <img src="../tyylit/icons/twitter-x.svg" alt="twitter-x" width="32" height="32">
-            </a>
-          </div>
-          <div class="instagram" type="button">
-            <a href="https://www.instagram.com">
-              <img src="../tyylit/icons/instagram.svg" alt="instagram" width="32" height="32">
-            </a>
-          </div>
-          <div class="meta" type="button">
-            <a href="https://www.facebook.com">
-              <img src="../tyylit/icons/meta.svg" alt="meta" width="32" height="32">
-            </a>
-          </div>
-          <div class="github" type="button">
-            <a href="https://www.github.com">
-              <img src="../tyylit/icons/github.svg" alt="github" width="32" height="32">
-            </a>
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="logo-footer">
+            <div class="logo-matikka">
+              <img src="../tyylit/Logo matikkaprojekti.png" class="img-fluid">
+            </div>
+            <p>Yksinkertaiset ja hauskat matematiikkapelit<br>peruskoululaisille.</p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <form class="position-absolute bottom-0 end-0 p-3">
-          <div class="mb-3">
-            <label for="Email" class="form-label">Sähköposti</label>
-            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Emme jaa sähköpostiasi kenellekään.</div>
+        <div class="col-md-6 ">
+          <div class="social-media-container">
+            <h5>Seuraa meitä somessa<br>ja tsekkaa meidän github!</h5>
+            <div class="twitter-x" type="button">
+              <a href="https://www.twitter.com">
+                <img src="../tyylit/icons/twitter-x.svg" alt="twitter-x" width="32" height="32">
+              </a>
+            </div>
+            <div class="instagram" type="button">
+              <a href="https://www.instagram.com">
+                <img src="../tyylit/icons/instagram.svg" alt="instagram" width="32" height="32">
+              </a>
+            </div>
+            <div class="meta" type="button">
+              <a href="https://www.facebook.com">
+                <img src="../tyylit/icons/meta.svg" alt="meta" width="32" height="32">
+              </a>
+            </div>
+            <div class="github" type="button">
+              <a href="https://www.github.com">
+                <img src="../tyylit/icons/github.svg" alt="github" width="32" height="32">
+              </a>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="Salasana" class="form-label">Salasana</label>
-            <input type="password" class="form-control" id="Salasana">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox">
-            <label class="form-check-label" for="checkbox">Haluan ilmoituksia myös tekstiviestillä</label>
-          </div>
-          <div class="move-button">
-          <button type="submit" class="btn btn-primary">Tilaa</button>
         </div>
-        </form>
       </div>
-    </div>
-  </footer>
+      <div class="row">
+        <div class="col-md-12">
+          <form class="position-absolute bottom-0 end-0 p-3">
+            <div class="mb-3">
+              <label for="Email" class="form-label">Sähköposti</label>
+              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Emme jaa sähköpostiasi kenellekään.</div>
+            </div>
+            <div class="mb-3">
+              <label for="Salasana" class="form-label">Salasana</label>
+              <input type="password" class="form-control" id="Salasana">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="checkbox">
+              <label class="form-check-label" for="checkbox">Haluan ilmoituksia myös tekstiviestillä</label>
+            </div>
+            <div class="move-button">
+            <button type="submit" class="btn btn-primary">Tilaa</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </footer>
 
 </body>
 <script src="../ohjelmointi/sanaristikko.js"></script>

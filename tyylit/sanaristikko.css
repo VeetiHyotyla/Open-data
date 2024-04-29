@@ -171,3 +171,16 @@ li {
     border: 2px solid black;
     width: 75px;
 }
+
+.aloitus {
+    position: relative;
+    font-size: 12px;
+    right: 6px;
+    bottom: 6px;
+}
+
+button {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 2px;
+}
