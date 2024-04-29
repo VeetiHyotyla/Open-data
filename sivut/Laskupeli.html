@@ -60,9 +60,8 @@
       <div class="container border border-dark p-3 rounded border border-4" id="peli">
         <p>Tässä pelissä pelaajan täytyy vastata yksinkertaisiin plus, miinus ja kertolaskuihin. Aina kun pelaaja saa
           vastauksen oikein, saa hän yhden<br>
-          pisteen. Jos pelaaja vastaa väärin kysymykseen, hän ei saa pistettä.<br>Pelaajan täytyy saada 10 vastausta
-          oikein voittaakseen pelin. Kolmesta<br>
-          väärästä vastauksesta häviät pelin. Aloita peli, kun olet valmis!</p>
+          pisteen. Jos pelaaja vastaa väärin kysymykseen, hän saa yhden miinus pisteen. Pelaajan täytyy saada vähintään 5
+          pistettä voittaakseen pelin. Peli loppuu, kun pelaaja saa oikein, tai väärin, 10 laskutoimitusta. Aloita peli, kun olet valmis!</p>
         <button type="button" class="btn btn-secondary btn-sm" id="start">Aloita</button>
       </div>
       <form id="game" style="display: none">
@@ -142,7 +141,7 @@
   </footer>
   <div class="row">
     <div class="col-md-12">
-      <form class="position-absolute bottom-0 end-0 p-3">
+      <form class="position-absolute bottom-0 end-0 p-3" id="s-posti-kenttä">
         <div class="mb-3">
           <label for="Email" class="form-label">Sähköposti</label>
           <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">

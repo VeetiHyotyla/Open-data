@@ -51,20 +51,29 @@ function Lasku() {
         document.getElementById("answer").value = ""
 
         if (correctCount === 10) {
-            Vastaukset("Voitit pelin!")
+            Pelipiste()
         }
+
 
     } else {
         alert("Väärin!")
         incorrectCount++
         document.getElementById("väärätvastaukset").textContent = incorrectCount;
 
-        if (incorrectCount === 3) {
-            return Vastaukset("Hävisit pelin.")
+        if (incorrectCount === 10) {
+            Pelipiste()
         }
 
         randomizeNumbers()
         document.getElementById("answer").value = ""
+    }
+}
+
+function Pelipiste() {
+    if (incorrectCount >= 5) {
+        Vastaukset("Hävisit pelin.")
+    } else {
+        Vastaukset("Voitit pelin!")
     }
 }
 
