@@ -48,53 +48,56 @@ function submit() {
 // sanaristikon toimivuus ja output ristikkoon
 
 function main(veikkaus) {
-    if (veikkaus === sanalista[0]) {
-        document.getElementById('v1').innerHTML = "o";
-        document.getElementById('v2').innerHTML = "s";
-        document.getElementById('v3').innerHTML = "a";
-        document.getElementById('v4').innerHTML = "m";
-        document.getElementById('v5').innerHTML = "ä";
-        document.getElementById('v6').innerHTML = "ä";
-        document.getElementById('v7').innerHTML = "r";
-        document.getElementById('v8').innerHTML = "ä";
-    } else if (veikkaus === sanalista[1]) {
-        document.getElementById('a1').innerHTML = "l";
-        document.getElementById('a2').innerHTML = "a";
-        document.getElementById('a3').innerHTML = "s";
-        document.getElementById('a4').innerHTML = "k";
-        document.getElementById('a5').innerHTML = "u";
-    } else if (veikkaus === sanalista[2]) {
-        document.getElementById('a3').innerHTML = "s";
-        document.getElementById('b1').innerHTML = "u";
-        document.getElementById('b2').innerHTML = "u";
-        document.getElementById('b3').innerHTML = "r";
-        document.getElementById('b4').innerHTML = "e";
-    } else if (veikkaus === sanalista[3]) {
-        document.getElementById('c1').innerHTML = "p";
-        document.getElementById('b4').innerHTML = "r";
-        document.getElementById('c3').innerHTML = "o";
-        document.getElementById('v2').innerHTML = "s";
-        document.getElementById('c5').innerHTML = "e";
-        document.getElementById('c6').innerHTML = "n";
-        document.getElementById('c7').innerHTML = "t";
-        document.getElementById('c8').innerHTML = "t";
-        document.getElementById('c9').innerHTML = "i";
-    } else if (veikkaus === sanalista[4]) {
-        document.getElementById('d1').innerHTML = "k";
-        document.getElementById('d2').innerHTML = "e";
-        document.getElementById('d3').innerHTML = "r";
-        document.getElementById('c7').innerHTML = "t";
-        document.getElementById('d4').innerHTML = "o";
-        document.getElementById('d5').innerHTML = "l";
-        document.getElementById('d6').innerHTML = "u";
-        document.getElementById('d7').innerHTML = "k";
-        document.getElementById('d8').innerHTML = "u";
-    } else if (veikkaus === sanalista[5]) {
-        document.getElementById('e1').innerHTML = "n";
-        document.getElementById('e2').innerHTML = "e";
-        document.getElementById('e3').innerHTML = "l";
-        document.getElementById('c9').innerHTML = "i";
-        document.getElementById('e4').innerHTML = "ö";
+    // Haetaan sana listasta
+    for (let i = 0; i < sanalista.length; i++) {
+        var sana = sanalista[i]
+
+        // Haetaan kirjain sanasta
+        if (veikkaus === sana) {
+            for (let j = 0; j < sana.length; j++) {
+                var kirjain = sana[j]
+
+                // tulostetaan sana ristikkoon
+                if (i === 0) {
+                    document.getElementById('v' + (j + 1)).innerHTML = kirjain
+                }
+                else if (i === 1) {
+                    document.getElementById('a' + (j + 1)).innerHTML = kirjain
+                }
+                else if (i === 2) {
+                    // otetaan huomioon 's' ruutu, joka on kahdessa sanassa
+                    if (j === 0) {
+                        document.getElementById('a3').innerHTML = kirjain
+                    } else {
+                        document.getElementById('b' + (j)).innerHTML = kirjain
+                    }
+                }
+                else if (i === 3) {
+                    if (kirjain === 'r') {
+                        document.getElementById('b3').innerHTML = kirjain
+                    } else if (kirjain === 's') {
+                        document.getElementById('v2').innerHTML = kirjain
+                    } else {
+                        document.getElementById('c' + (j + 1)).innerHTML = kirjain
+                    }
+
+                }
+                else if (i === 4) {
+                    if (kirjain === 't') {
+                        document.getElementById('c7').innerHTML = kirjain
+                    } else {
+                        document.getElementById('d' + (j + 1)).innerHTML = kirjain
+                    }
+                }
+                else if (i === 5) {
+                    if (kirjain === 'i') {
+                        document.getElementById('c9').innerHTML = kirjain
+                    } else {
+                        document.getElementById('e' + (j + 1)).innerHTML = kirjain
+                    }
+                }  
+            }
+        }
     }
 }
 
