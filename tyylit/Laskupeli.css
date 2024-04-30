@@ -132,8 +132,16 @@ header {
     padding: 0;
 }
 
+h1 {
+    position: absolute;
+    font-family: serif;
+    right: 22em;
+    top: 0.6em;
+}
+
 .logo {
     flex: 1.5;
+    position: relative;
 }
 
 .logo img {
@@ -141,16 +149,6 @@ header {
     height: auto;
     display: flex;
     max-width: 100px;
-}
-
-.header {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    justify-content: flex-start;
-    position: absolute;
-    left: 53em;
 }
 
 body {
