@@ -31,8 +31,10 @@ footer {
     font-size: 11px;
 }
 
-#game {
-    justify-items: center;
+#game .container {
+    text-align: center;
+    margin-bottom: 250px;
+    margin-left: 80px; 
 }
 
 #peli {
@@ -43,6 +45,7 @@ footer {
 #content {
     margin-top: 140px;
 }
+
 
 footer p {
     font-family: Arial, Helvetica, sans-serif;

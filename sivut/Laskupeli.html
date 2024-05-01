@@ -66,24 +66,21 @@
                 pisteen. Jos pelaaja vastaa väärin kysymykseen, hän saa yhden miinus pisteen. Pelaajan täytyy saada
                 vähintään
                 5
-                pistettä voittaakseen pelin. Peli loppuu, kun pelaaja saa oikein, tai väärin, 10 laskutoimitusta. Aloita
-                peli,
-                kun olet valmis!</p>
-              <button type="button" class="btn btn-secondary btn-sm" id="start">Aloita</button>
+                pistettä voittaakseen pelin. Peli loppuu, kun pelaaja saa oikein, tai väärin, 10 laskutoimitusta.</p>
             </div>
           </div>
           <div class="col-md-6">
-            <form id="game" style="display: none">
-              <div class="container border border-dark p-3 rounded border border-4" id="laskut">
-                <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
-                <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
-              </div>
-              <div id="number" class="container-fluid">
+            <form id="game">
+              <div id="number" class="container">
                 <output id="num1"></output>
                 <output id="operator"></output>
                 <output id="num2"></output>
                 <input type="number" id="answer">
                 <button type="button" class="btn btn-secondary btn-sm" id="submit">Vastaa</button>
+              </div>
+              <div class="container border border-dark p-3 rounded border border-4" id="laskut">
+                <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
+                <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
               </div>
               <div id="taulukko" style="display: none;">
                 <h3>Tulokset:</h3>

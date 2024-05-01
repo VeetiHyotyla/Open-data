@@ -99,12 +99,10 @@ document.addEventListener("keydown", function(event) {
     }
 })
 
-document.getElementById("start").addEventListener("click", function () {
-    document.getElementById("peli").style.display = "none"
-    document.getElementById("game").style.display = "block"
+document.addEventListener("DOMContentLoaded", function() {
     correctCount = 0
     incorrectCount = 0
     document.getElementById("oikeatvastaukset").textContent = correctCount;
     document.getElementById("väärätvastaukset").textContent = incorrectCount;
-    startGame()
-})
+    startGame();
+});
