@@ -54,56 +54,65 @@
 
 
   </div>
-  <div class="row"></div>
   <div id="content">
     <main>
-      <div class="container border border-dark p-3 rounded border border-4" id="peli">
-        <p>Tässä pelissä pelaajan täytyy vastata yksinkertaisiin plus, miinus ja kertolaskuihin. Aina kun pelaaja saa
-          vastauksen oikein, saa hän yhden<br>
-          pisteen. Jos pelaaja vastaa väärin kysymykseen, hän saa yhden miinus pisteen. Pelaajan täytyy saada
-          vähintään
-          5
-          pistettä voittaakseen pelin. Peli loppuu, kun pelaaja saa oikein, tai väärin, 10 laskutoimitusta. Aloita
-          peli,
-          kun olet valmis!</p>
-        <button type="button" class="btn btn-secondary btn-sm" id="start">Aloita</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="container border border-dark p-3 rounded border border-4" id="peli">
+              <p>Tässä pelissä pelaajan täytyy vastata yksinkertaisiin plus, miinus ja kertolaskuihin. Aina kun pelaaja
+                saa
+                vastauksen oikein, saa hän yhden
+                pisteen. Jos pelaaja vastaa väärin kysymykseen, hän saa yhden miinus pisteen. Pelaajan täytyy saada
+                vähintään
+                5
+                pistettä voittaakseen pelin. Peli loppuu, kun pelaaja saa oikein, tai väärin, 10 laskutoimitusta. Aloita
+                peli,
+                kun olet valmis!</p>
+              <button type="button" class="btn btn-secondary btn-sm" id="start">Aloita</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form id="game" style="display: none">
+              <div class="container border border-dark p-3 rounded border border-4" id="laskut">
+                <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
+                <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
+              </div>
+              <div id="number" class="container-fluid">
+                <output id="num1"></output>
+                <output id="operator"></output>
+                <output id="num2"></output>
+                <input type="number" id="answer">
+                <button type="button" class="btn btn-secondary btn-sm" id="submit">Vastaa</button>
+              </div>
+              <div id="taulukko" style="display: none;">
+                <h3>Tulokset:</h3>
+                <p id="tulos"></p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Oikeat vastaukset</th>
+                      <th scope="col">Väärät vastaukset</th>
+                      <th scope="col">Pisteet</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="oikeat"></td>
+                      <td id="väärät"></td>
+                      <td id="pisteet"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <form id="game" style="display: none">
-        <div class="container border border-dark p-3 rounded border border-4" id="laskut">
-          <p>Oikeat vastaukset: <span id="oikeatvastaukset">0</span>
-          <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
-        </div>
-        <div id="number" class="container-fluid">
-          <output id="num1"></output>
-          <output id="operator"></output>
-          <output id="num2"></output>
-          <input type="number" id="answer">
-          <button type="button" class="btn btn-secondary btn-sm" id="submit">Vastaa</button>
-        </div>
-        <div id="taulukko" style="display: none;">
-          <h3>Tulokset:</h3>
-          <p id="tulos"></p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Oikeat vastaukset</th>
-                <th scope="col">Väärät vastaukset</th>
-                <th scope="col">Pisteet</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="oikeat"></td>
-                <td id="väärät"></td>
-                <td id="pisteet"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    </main>
   </div>
-  </div>
-  </form>
-  </main>
+
+
   <footer class="container-fluid">
     <div class="row">
       <div class="col-md-6">
