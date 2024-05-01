@@ -13,13 +13,14 @@ li a:hover {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
     background-color:#787878;
     height: 14em;
     padding: 20px;
+
 }
 
 footer p {
@@ -89,6 +90,7 @@ header {
     padding: 0;
     background-color: #C76B6F;
 }
+
 .logo {
     flex: 1.5;
 }
@@ -100,12 +102,7 @@ header {
     max-width: 100px; 
     
 }
-.header {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+
 body {
     margin: 0;
     padding: 0;
@@ -115,6 +112,7 @@ body {
     max-width: 100%;
     float: left;
     padding: 20px;
+
 }
 
 .ruutu {
@@ -135,9 +133,12 @@ body {
 }
 
 h1 {
-    text-align: center;
     font-family: serif;
+    position: absolute;
+    right: 22em;
+    top: 0.6em;
 }
+
 
 h2 {
     font-family: serif;
@@ -183,4 +184,32 @@ button {
     display: inline-block;
     margin-top: 5px;
     margin-left: 2px;
+}
+
+
+@media screen and (max-width: 770px){
+
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color:#787878;
+        height: 14em;
+        padding: 20px;
+    
+    }
+
+    #content-wrap {
+        padding-bottom: 2.5rem;
+    }
+
+    .tulos {
+        margin-top: 2px;
+    }
 }
