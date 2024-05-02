@@ -107,3 +107,20 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.tekijat {
+    margin: 200px; 
+    padding: 20px;
+    width: auto; 
+    position: fixed;
+    background-color: #787878;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 5px
+  }
+.teki {
+    margin: 100px;
+    width: auto; 
+    position: fixed;
+    border-radius: 5px
+}

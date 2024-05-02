@@ -161,3 +161,11 @@ body {
     border: none;
     color: white;
 }
+.teki {
+    margin: 100px; 
+    width: auto; 
+    position: fixed;
+    background-color: #787878;
+    color: white;
+    border: 2px solid #000;
+  }
