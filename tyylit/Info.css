@@ -108,19 +108,23 @@ body {
     padding: 0;
 }
 
-.tekijat {
-    margin: 200px; 
-    padding: 20px;
-    width: auto; 
-    position: fixed;
-    background-color: #787878;
-    color: white;
-    border: 2px solid #000;
-    border-radius: 5px
-  }
 .teki {
-    margin: 100px;
-    width: auto; 
-    position: fixed;
-    border-radius: 5px
+    position: fixed; 
+    top: 200px; 
+    left: 25%; 
+    transform: translateX(-50%); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.tekijat {
+    position: fixed; 
+    top: 275px; 
+    left: 25%; 
+    transform: translateX(-50%); 
+    padding: 20px; 
+    background-color: #787878; 
+    color: white; 
+    border: 2px solid #000; 
+    border-radius: 5px; 
 }
