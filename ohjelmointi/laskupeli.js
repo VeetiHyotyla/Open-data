@@ -79,6 +79,7 @@ function Pelipiste() {
 
 function Vastaukset(viesti) {
     document.getElementById("laskut").style.display = "none"
+    document.getElementById("peli").style.display = "none"
     document.getElementById("number").style.display = "none"
     document.getElementById("taulukko").style.display = "block"
     document.getElementById("tulos").textContent = viesti
