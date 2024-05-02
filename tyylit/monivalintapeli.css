@@ -1,5 +1,5 @@
 .navbar {
-    background-color:#C76B6F;
+    background-color: #C76B6F;
 }
 
 .navbar a {
@@ -13,38 +13,14 @@ li a:hover {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
     background-color:#787878;
     height: 14em;
     padding: 20px;
-    margin-top: auto;
-}
 
-#peli {
-    width: 550px;
-    height: 250px;
-    position:fixed;
-    left: 5em;
-    top: 14em;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-form #number {
-    position:absolute;
-    right: 26em;
-    bottom: 63em;
-}
-
-form #vastaukset {
-    position:absolute;
-    bottom: 27em;
-    right: 120em;
-    font-size: larger;
-    width: 18em;
 }
 
 footer p {
@@ -89,16 +65,7 @@ footer .github {
 
 footer .logo-matikka {
     width: 5em;
-    text-align: left;
-}
-
-
-#game {
-    width:250px;
-    height: 220px;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    font-size: 11px;
+    text-align: left;   
 }
 
 form {
@@ -111,57 +78,35 @@ form {
 
 form .move-button {
     position: absolute;
-    bottom: 1em;
+    bottom: 0em;
     left: -8em;
 }
-
-#number {
-    position: absolute;
-    left: 3em;
-    top: 20em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:larger;
-}
-
-.uutislomake {
-    font-family: Arial, Helvetica, sans-serif;
-    position:absolute;
-    right: -64em;
-    font-size: larger;
-    bottom: 8em;
-}
-
 header {
-    background-color: #C76B6F;
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #C76B6F;
 }
+
 .logo {
-    flex: 1.5;
+    flex: 0.5;
 }
 
 .logo img {
     width: auto;
     height: auto;
     display: flex;
-    max-width: 100px;
+    max-width: 100px; 
+    
 }
-.header {
-    flex: 1;
-    display:flex;
-    align-items: center;
-    margin-left: auto;
-    justify-content: flex-start;
-    position:absolute;
-    left: 53em;
-}
+
 body {
     margin: 0;
     padding: 0;
 }
+
 #monivalinta {
     margin: 100px; 
     width: 500px; 
