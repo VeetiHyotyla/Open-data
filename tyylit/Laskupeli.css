@@ -53,31 +53,6 @@ footer h5 {
     bottom: 6em;
 }
 
-
-footer .twitter-x {
-    position: absolute;
-    right: 65em;
-    top: 8em;
-}
-
-footer .instagram {
-    position: absolute;
-    right: 61.5em;
-    top: 8em;
-}
-
-footer .meta {
-    position: absolute;
-    right: 58em;
-    top: 8em;
-}
-
-footer .github {
-    position: absolute;
-    right: 54.5em;
-    top: 8em;
-}
-
 footer .logo-matikka {
     width: 5em;
     text-align: left;
