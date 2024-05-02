@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #AB5754;
+    background-color: #C76B6F;
 }
 
 .navbar a {
@@ -13,13 +13,14 @@ li a:hover {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
     background-color:#787878;
     height: 14em;
     padding: 20px;
+
 }
 
 footer p {
@@ -64,9 +65,8 @@ footer .github {
 
 footer .logo-matikka {
     width: 5em;
-    text-align: left;
+    text-align: left;   
 }
-
 
 form {
     width:250px;
@@ -76,12 +76,10 @@ form {
     font-size: 11px;
 }
 
-.uutislomake {
-    font-family: Arial, Helvetica, sans-serif;
-    position:absolute;
-    right: -64em;
-    font-size: larger;
-    bottom: 8em;
+form .move-button {
+    position: absolute;
+    bottom: 0em;
+    left: -8em;
 }
 
 header {
@@ -90,33 +88,43 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #C76B6F;
 }
+
 .logo {
-    flex: 1.5;
+    flex: 0.5;
 }
 
 .logo img {
     width: auto;
     height: auto;
     display: flex;
-    max-width: 100px;
+    max-width: 100px; 
+    
 }
-.header {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    justify-content: flex-start;
-    position:absolute;
-    left: 53em;
-}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-form .move-button {
-    position: absolute;
-    bottom: 0em;
-    left: -8em;
+.teki {
+    position: fixed; 
+    top: 200px; 
+    left: 25%; 
+    transform: translateX(-50%); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.tekijat {
+    position: fixed; 
+    top: 275px; 
+    left: 25%; 
+    transform: translateX(-50%); 
+    padding: 20px; 
+    background-color: #787878; 
+    color: white; 
+    border: 2px solid #000; 
+    border-radius: 5px; 
 }
