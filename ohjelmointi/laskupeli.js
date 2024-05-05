@@ -6,6 +6,7 @@ const getRandomIntNumberInRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+
 function RandomOperator() {
     let operators = ["+", "-", "*"]
     let randomIndex = Math.floor(Math.random() * operators.length)
@@ -33,7 +34,6 @@ const randomizeNumbers = () => {
     document.querySelector("#num2").textContent = num2
     document.getElementById("operator").textContent = operator
 }
-
 
 function startGame() {
     randomizeNumbers()
@@ -93,17 +93,9 @@ function Vastaukset(viesti) {
 
 document.getElementById("submit").addEventListener("click", Lasku);
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault()
         Lasku()
     }
 })
-
-document.addEventListener("DOMContentLoaded", function() {
-    correctCount = 0
-    incorrectCount = 0
-    document.getElementById("oikeatvastaukset").textContent = correctCount;
-    document.getElementById("väärätvastaukset").textContent = incorrectCount;
-    startGame();
-});

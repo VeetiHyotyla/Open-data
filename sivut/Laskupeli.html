@@ -54,8 +54,6 @@
     </div>
   </nav>
 
-
-  </div>
   <div id="content">
     <main>
       <div class="container">
@@ -69,6 +67,7 @@
                 vähintään
                 5
                 pistettä voittaakseen pelin. Peli loppuu, kun pelaaja saa oikein, tai väärin, 10 laskutoimitusta.</p>
+              <button onclick="startGame()" type="button" class="btn btn-secondary">Aloita peli</button>
             </div>
           </div>
           <div class="col-md-6">
@@ -85,27 +84,27 @@
                 <p>Väärät vastaukset: <span id="väärätvastaukset">0</span>
               </div>
               <div class="col-md-6">
-              <div id="taulukko" style="display: none;">
-                <h3>Tulokset:</h3>
-                <p id="tulos"></p>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Oikeat vastaukset</th>
-                      <th scope="col">Väärät vastaukset</th>
-                      <th scope="col">Pisteet</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td id="oikeat"></td>
-                      <td id="väärät"></td>
-                      <td id="pisteet"></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div id="taulukko" style="display: none;">
+                  <h3>Tulokset:</h3>
+                  <p id="tulos"></p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Oikeat vastaukset</th>
+                        <th scope="col">Väärät vastaukset</th>
+                        <th scope="col">Pisteet</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td id="oikeat"></td>
+                        <td id="väärät"></td>
+                        <td id="pisteet"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
             </form>
           </div>
         </div>
@@ -113,69 +112,70 @@
     </main>
   </div>
 
-    <footer>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 col-lg-6">
-            <div class="logo-footer">
-              <div class="logo-matikka">
-                <img src="../tyylit/Logo matikkaprojekti.png" class="img-fluid">
-              </div>
-              <p>Yksinkertaiset ja hauskat matematiikkapelit<br>peruskoululaisille.</p>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="logo-footer">
+            <div class="logo-matikka">
+              <img src="../tyylit/Logo matikkaprojekti.png" class="img-fluid">
             </div>
+            <p>Yksinkertaiset ja hauskat matematiikkapelit<br>peruskoululaisille.</p>
           </div>
-          <div class="col-md-6 ">
-            <div class="social-media-container">
-              <h5>Seuraa meitä somessa<br>ja tsekkaa meidän github!</h5>
-              <div class="twitter-x" type="button">
-                <a href="https://www.twitter.com">
-                  <img src="../tyylit/icons/twitter-x.svg" alt="twitter-x" width="32" height="32">
-                </a>
-              </div>
-              <div class="instagram" type="button">
-                <a href="https://www.instagram.com">
-                  <img src="../tyylit/icons/instagram.svg" alt="instagram" width="32" height="32">
-                </a>
-              </div>
-              <div class="meta" type="button">
-                <a href="https://www.facebook.com">
-                  <img src="../tyylit/icons/meta.svg" alt="meta" width="32" height="32">
-                </a>
-              </div>
-              <div class="github" type="button">
-                <a href="https://www.github.com">
-                  <img src="../tyylit/icons/github.svg" alt="github" width="32" height="32">
-                </a>
-              </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="social-media-container">
+            <h5>Seuraa meitä somessa<br>ja tsekkaa meidän github!</h5>
+            <div class="twitter-x" type="button">
+              <a href="https://www.twitter.com">
+                <img src="../tyylit/icons/twitter-x.svg" alt="twitter-x" width="32" height="32">
+              </a>
+            </div>
+            <div class="instagram" type="button">
+              <a href="https://www.instagram.com">
+                <img src="../tyylit/icons/instagram.svg" alt="instagram" width="32" height="32">
+              </a>
+            </div>
+            <div class="meta" type="button">
+              <a href="https://www.facebook.com">
+                <img src="../tyylit/icons/meta.svg" alt="meta" width="32" height="32">
+              </a>
+            </div>
+            <div class="github" type="button">
+              <a href="https://www.github.com">
+                <img src="../tyylit/icons/github.svg" alt="github" width="32" height="32">
+              </a>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <form class="position-absolute bottom-0 end-0 p-3">
-              <div class="mb-3">
-                <label for="Email" class="form-label">Sähköposti</label>
-                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Emme jaa sähköpostiasi kenellekään.</div>
-              </div>
-              <div class="mb-3">
-                <label for="Salasana" class="form-label">Salasana</label>
-                <input type="password" class="form-control" id="Salasana">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="checkbox">
-                <label class="form-check-label" for="checkbox">Haluan ilmoituksia myös tekstiviestillä</label>
-              </div>
-              <div class="move-button">
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form class="position-absolute bottom-0 end-0 p-3">
+            <div class="mb-3">
+              <label for="Email" class="form-label">Sähköposti</label>
+              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Emme jaa sähköpostiasi kenellekään.</div>
+            </div>
+            <div class="mb-3">
+              <label for="Salasana" class="form-label">Salasana</label>
+              <input type="password" class="form-control" id="Salasana">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="checkbox">
+              <label class="form-check-label" for="checkbox">Haluan ilmoituksia myös tekstiviestillä</label>
+            </div>
+            <div class="move-button">
               <button type="submit" class="btn btn-primary">Tilaa</button>
             </div>
-            </form>
-          </div>
+          </form>
         </div>
-    </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="../ohjelmointi/laskupeli.js"></script>
+</body>
 
 </html>
