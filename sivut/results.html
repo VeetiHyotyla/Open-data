@@ -128,7 +128,7 @@
             const sanaristikkoIncorrect = document.getElementById('sanaristikko-incorrect');
             const sanaristikkoResults = {
                 correct: localStorage.getItem('score') || 0,
-                incorrect: localStorage.getItem('score') || 0,
+                incorrect: localStorage.getItem('') || 0,
             };
             sanaristikkoCorrect.textContent = sanaristikkoResults.correct;
             sanaristikkoIncorrect.textContent = sanaristikkoResults.incorrect;
