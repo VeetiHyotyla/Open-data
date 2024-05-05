@@ -34,7 +34,6 @@ const randomizeNumbers = () => {
     document.getElementById("operator").textContent = operator
 }
 
-
 function startGame() {
     randomizeNumbers()
 }
@@ -99,11 +98,3 @@ document.addEventListener("keydown", function(event) {
         Lasku()
     }
 })
-
-document.addEventListener("DOMContentLoaded", function() {
-    correctCount = 0
-    incorrectCount = 0
-    document.getElementById("oikeatvastaukset").textContent = correctCount;
-    document.getElementById("väärätvastaukset").textContent = incorrectCount;
-    startGame();
-});
