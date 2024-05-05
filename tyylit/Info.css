@@ -109,22 +109,60 @@ body {
 }
 
 .teki {
-    position: fixed; 
-    top: 200px; 
-    left: 25%; 
-    transform: translateX(-50%); 
     padding: 10px; 
     border-radius: 5px; 
 }
 
 .tekijat {
-    position: fixed; 
-    top: 275px; 
-    left: 25%; 
-    transform: translateX(-50%); 
     padding: 20px; 
     background-color: #787878; 
     color: white; 
     border: 2px solid #000; 
     border-radius: 5px; 
+}
+
+.lahteet {
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.lahteet2 {
+    padding: 20px; 
+    background-color: #787878; 
+    color: white; 
+    border: 2px solid #000; 
+    border-radius: 5px; 
+}
+
+a {
+    padding: 20px;
+    color: #C76B6F;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 770px){
+
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color:#787878;
+        height: 14em;
+        padding: 20px;
+    
+    }
+
+    #content-wrap {
+        padding-bottom: 2.5rem;
+    }
+
+    .tulos {
+        margin-top: 2px;
+    }
 }
