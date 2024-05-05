@@ -1,162 +1,83 @@
 body {
-    font-family: serif;
-}
-
-p {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
-    background-color: #C76B6F;
-}
-
-.navbar a {
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 1em; 
-}
-
-li a:hover {
-    font-weight: bold;
-}
-
-footer {
-    position: relative;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    background-color:#787878;
-    height: 14em;
-    padding: 20px;
-    margin-top: auto;
-}
-
-footer p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    position: absolute;
-    bottom: 2em;
-}
-
-footer h5 {
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    bottom: 0;
-    right: 42em;
-    bottom: 6em;
-}
-
- 
-footer .twitter-x {
-    position: absolute;
-    right: 65em;
-    top: 8em;
-}
-
-footer .instagram {
-    position: absolute;
-    right: 61.5em;
-    top: 8em;
-}
-
-footer .meta {
-    position: absolute;
-    right: 58em;
-    top: 8em;
-}
-
-footer .github {
-    position: absolute;
-    right: 54.5em;
-    top: 8em;
-}
-
-footer .logo-matikka {
-    width: 5em;
-    text-align: left;
-    
-}
-
-form {
-    width:250px;
-    height: 220px;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    font-size: 11px;
-}
-
-form .move-button {
-    position: absolute;
-    bottom: 0em;
-    left: -8em;
-}
-
-.uutislomake {
-    font-family: Arial, Helvetica, sans-serif;
-    position:absolute;
-    font-size: larger;
-    bottom: 8em;
-}
-
-header {
+    background-color: #333;
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: #C76B6F;
-    
-}
-.logo {
-    flex: 1.5;
+    padding: 10px 20px;
 }
 
-.logo img {
-    width: auto;
-    height: auto;
-    display: flex;
-    max-width: 100px; 
-    
-}
-.header {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    
+.navbar-brand {
+    color: white;
+    font-size: 24px;
 }
 
-.redelement {
-    border-radius: 0 0 50% 0;
-    padding: 20px;
-    width: 100%;
-    height: 350px;
-    background-color: #C76B6F;
+.navbar-result {
+    color: white;
 }
 
 .content {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
     text-align: center;
 }
 
-.infoa {
-    margin-top: 2em;
+#answers {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.harmaa {
-    padding: 20px;
-    background-color: lightgray; 
+.answer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-h2 {
-    font-family: serif;
-    margin-top: 35px;
+.answer.selected {
+    background-color: #388e3c;
 }
 
-.himmea {
-    color: grey;
+#nextBtn, #tryAgainBtn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.kysymys {
-    margin-left: 200px;
-    margin-top: 50px;
-    width: 80%;
+#questionNumber {
+    text-align: center;
+    font-size: 16px;
 }
+
+#results {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
