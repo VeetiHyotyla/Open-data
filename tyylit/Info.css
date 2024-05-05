@@ -128,3 +128,13 @@ body {
     border: 2px solid #000; 
     border-radius: 5px; 
 }
+
+@media screen and (max-width: 770px) {
+    
+    footer .social-media-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+}
