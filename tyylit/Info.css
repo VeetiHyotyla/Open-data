@@ -145,6 +145,11 @@ body {
     border-radius: 5px; 
 }
 
+a {
+    text-decoration: none;
+    color: #C76B6F;
+}
+
 @media screen and (max-width: 770px) {
     
     footer {
