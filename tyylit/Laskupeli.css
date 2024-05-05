@@ -159,17 +159,14 @@ body {
     
     }
 
-    footer h5 {
+    footer p {
         display: none;
     }
 
     footer .social-media-container {
         flex-direction: row;
-        justify-content:center;
-    }
-
-    footer .social-media-container a {
-        margin-right: 10px;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     footer .twitter-x,
@@ -177,6 +174,6 @@ body {
     footer .meta,
     footer .github {
         position: static;
-        margin-top: 10px; 
+        margin-top: 10px;
     }
 }
