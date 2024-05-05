@@ -53,9 +53,50 @@ footer h5 {
     bottom: 6em;
 }
 
+footer .twitter-x {
+    position: absolute;
+    right: 65em;
+    top: 8em;
+}
+
+footer .instagram {
+    position: absolute;
+    right: 61.5em;
+    top: 8em;
+}
+
+footer .meta {
+    position: absolute;
+    right: 58em;
+    top: 8em;
+}
+
+footer .github {
+    position: absolute;
+    right: 54.5em;
+    top: 8em;
+}
+
+footer .logo-matikka {
+    width: 5em;
+    text-align: left;   
+}
+
+
 footer .logo-matikka {
     width: 5em;
     text-align: left;
+}
+
+footer .social-media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .social-media-container a {
+    display: inline-block;
 }
 
 form .move-button {
@@ -73,8 +114,12 @@ footer form {
 }
 
 header {
-    background-color: #C76B6F;
+    display: flex;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C76B6F;
 }
 
 h1 {
@@ -112,5 +157,26 @@ body {
         height: 14em;
         padding: 20px;
     
+    }
+
+    footer h5 {
+        display: none;
+    }
+
+    footer .social-media-container {
+        flex-direction: row;
+        justify-content:center;
+    }
+
+    footer .social-media-container a {
+        margin-right: 10px;
+    }
+
+    footer .twitter-x,
+    footer .instagram,
+    footer .meta,
+    footer .github {
+        position: static;
+        margin-top: 10px; 
     }
 }
