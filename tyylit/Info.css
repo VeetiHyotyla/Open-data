@@ -109,19 +109,11 @@ body {
 }
 
 .teki {
-    position: fixed; 
-    top: 200px; 
-    left: 25%; 
-    transform: translateX(-50%); 
     padding: 10px; 
     border-radius: 5px; 
 }
 
 .tekijat {
-    position: fixed; 
-    top: 275px; 
-    left: 25%; 
-    transform: translateX(-50%); 
     padding: 20px; 
     background-color: #787878; 
     color: white; 
@@ -129,12 +121,15 @@ body {
     border-radius: 5px; 
 }
 
-@media screen and (max-width: 770px) {
-    
-    footer .social-media-container {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-    }
+.lahteet {
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.lahteet2 {
+    padding: 20px; 
+    background-color: #787878; 
+    color: white; 
+    border: 2px solid #000; 
+    border-radius: 5px; 
 }

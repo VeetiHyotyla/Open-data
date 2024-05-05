@@ -82,3 +82,149 @@ footer {
     text-align: center;
     margin-top: auto; 
 }
+
+.navbar {
+    background-color: #C76B6F;
+}
+
+.navbar a {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1em; 
+}
+
+li a:hover {
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color:#787878;
+    height: 14em;
+    padding: 20px;
+
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    position: absolute;
+    bottom: 2em;
+}
+
+footer h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    right: 42em;
+    bottom: 6em;
+}
+
+ 
+footer .twitter-x {
+    position: absolute;
+    right: 65em;
+    top: 8em;
+}
+
+footer .instagram {
+    position: absolute;
+    right: 61.5em;
+    top: 8em;
+}
+
+footer .meta {
+    position: absolute;
+    right: 58em;
+    top: 8em;
+}
+
+footer .github {
+    position: absolute;
+    right: 54.5em;
+    top: 8em;
+}
+
+footer .logo-matikka {
+    width: 5em;
+    text-align: left;   
+}
+
+form {
+    width:250px;
+    height: 220px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 11px;
+}
+
+form .move-button {
+    position: absolute;
+    bottom: 0em;
+    left: -8em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C76B6F;
+}
+
+.logo {
+    flex: 1.5;
+}
+
+.logo img {
+    width: auto;
+    height: auto;
+    display: flex;
+    max-width: 100px; 
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#crossword {
+    max-width: 100%;
+    float: left;
+    padding: 20px;
+
+}
+
+.ruutu {
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.white {
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: serif;
+    position: absolute;
+    right: 22em;
+    top: 0.6em;
+}
+
+
+h2 {
+    font-family: serif;
+}
