@@ -13,3 +13,7 @@ KilpiRon, Roni Kilpinen
 ## Hacknplan
 
 [Hacknplan](https://app.hacknplan.com/p/202254/dashboards/project/)
+
+## Nettisivu
+
+[Nettisivu](https://www.students.oamk.fi/~n3pite00/TIK23_web_1-4/sivut/index.html)
