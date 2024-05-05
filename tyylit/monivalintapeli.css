@@ -68,6 +68,16 @@ footer .logo-matikka {
     text-align: left;   
 }
 
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media-container a {
+    display: inline-block;
+}
+
 form {
     width:250px;
     height: 220px;
@@ -169,3 +179,36 @@ body {
     color: white;
     border: 2px solid #000;
   }
+
+  @media screen and (max-width: 770px) {
+    
+    footer {
+        position: relative;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color:#787878;
+        height: 14em;
+        padding: 20px;
+    
+    }
+
+    footer p {
+        display: none;
+    }
+
+    footer .social-media-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    footer .twitter-x,
+    footer .instagram,
+    footer .meta,
+    footer .github {
+        position: static;
+        margin-top: 10px;
+    }
+}
