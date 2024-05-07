@@ -2,18 +2,18 @@ let correctCount = 0
 let incorrectCount = 0
 let num1, num2, operator
 
-const getRandomIntNumberInRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-}
-
-if (localStorage.getItem("laskupeliCorrect") !== null) {
-    correctCount = parseInt(localStorage.getItem("laskupeliCorrect"))
-    document.getElementById("laskupeli-correct").innerHTML = correctCount
+if (localStorage.getItem('laskupeliCorrect') !== null) {
+    correctCount = parseInt(localStorage.getItem('laskupeliCorrect'))
+    document.getElementById('laskupeli-correct').innerHTML = correctCount
 }
 
 if (localStorage.getItem('laskupeliIncorrect') !== null) {
     incorrectCount = parseInt(localStorage.getItem('laskupeliIncorrect'))
     document.getElementById('laskupeli-incorrect').innerHTML = incorrectCount
+} 
+
+const getRandomIntNumberInRange = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 function RandomOperator() {
@@ -45,19 +45,14 @@ const randomizeNumbers = () => {
 }
 
 function startGame() {
-    if (localStorage.getItem("laskupeliCorrect") !== null) {
-        correctCount = parseInt(localStorage.getItem("laskupeliCorrect"))
-        document.getElementById("oikeatvastaukset").textContent = correctCount
-    }
-    
-    if (localStorage.getItem('laskupeliIncorrect') !== null) {
-        incorrectCount = parseInt(localStorage.getItem('laskupeliIncorrect'))
-        document.getElementById("väärätvastaukset").textContent = incorrectCount
-    }
-    document.getElementById("laskupeli-correct").textContent = correctCount
-    document.getElementById("laskupeli-incorrect").textContent = incorrectCount
-    
     randomizeNumbers()
+}
+
+function updateResults() {
+    localStorage.setItem("laskupeliCorrect", correctCount)
+    localStorage.setItem('laskupeliIncorrect', incorrectCount);
+    document.getElementById('laskupeli-correct').textContent = correctCount;
+    document.getElementById('laskupeli-incorrect').textContent = incorrectCount;
 }
 
 function Lasku() {
@@ -86,15 +81,8 @@ function Lasku() {
         document.getElementById("answer").value = ""
     }
     
-    randomizeNumbers()
     updateResults()
-}
-
-function updateResults() {
-    localStorage.setItem("laskupeliCorrect", correctCount)
-    localStorage.setItem('laskupeliIncorrect', incorrectCount);
-    document.getElementById('laskupeli-correct').textContent = correctCount;
-    document.getElementById('laskupeli-incorrect').textContent = incorrectCount;
+    randomizeNumbers()
 }
 
 function Pelipiste() {
@@ -126,7 +114,6 @@ document.getElementById("start").addEventListener("click", function () {
 document.getElementById("submit").addEventListener("click", function () {
     Lasku()
 })
-
 
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
