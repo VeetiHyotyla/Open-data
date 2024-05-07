@@ -6,6 +6,15 @@ const getRandomIntNumberInRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+if (localStorage.getItem("laskupeliCorrect") !== null) {
+    correctCount = parseInt(localStorage.getItem("laskupeliCorrect"))
+    document.getElementById("laskupeli-correct").innerHTML = correctCount
+}
+
+if (localStorage.getItem('laskupeliIncorrect') !== null) {
+    incorrectCount = parseInt(localStorage.getItem('laskupeliIncorrect'))
+    document.getElementById('laskupeli-incorrect').innerHTML = incorrectCount
+}
 
 function RandomOperator() {
     let operators = ["+", "-", "*"]
@@ -39,15 +48,21 @@ function startGame() {
     randomizeNumbers()
 }
 
+function jatkaPeliä() {
+    randomizeNumbers()
+    document.getElementById("oikeatvastaukset").textContent = correctCount
+    document.getElementById("väärätvastaukset").textContent = incorrectCount
+}
+
 function Lasku() {
-    let result = Calculate(operator, num1, num2);
+    randomizeNumbers()
+    let result = Calculate(operator, num1, num2)
     let input = parseInt(document.getElementById("answer").value)
 
     if (Number(input) === result) {
         alert("Oikein!")
         correctCount++
         document.getElementById("oikeatvastaukset").textContent = correctCount
-        randomizeNumbers()
         document.getElementById("answer").value = ""
 
         if (correctCount === 10) {
@@ -64,9 +79,17 @@ function Lasku() {
             Pelipiste()
         }
 
-        randomizeNumbers()
         document.getElementById("answer").value = ""
     }
+
+    updateResults()
+}
+
+function updateResults() {
+    localStorage.setItem('laskupeliCorrect', correctCount);
+    localStorage.setItem('laskupeliIncorrect', incorrectCount);
+    document.getElementById('laskupeli-correct').textContent = correctCount;
+    document.getElementById('laskupeli-incorrect').textContent = incorrectCount;
 }
 
 function Pelipiste() {
@@ -91,7 +114,14 @@ function Vastaukset(viesti) {
 
 }
 
-document.getElementById("submit").addEventListener("click", Lasku);
+document.getElementById("start").addEventListener("click", function () {
+    startGame()
+})
+
+document.getElementById("submit").addEventListener("click", function () {
+    Lasku()
+})
+
 
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
