@@ -113,6 +113,7 @@ function scoreUpdate() {
 // Tallennuksen tyhjennys
 
 function tyhjennys() {
-    localStorage.clear()
+    localStorage.removeItem('pisteytetty')
+    localStorage.removeItem('score')
     location.reload()
 }
