@@ -2,16 +2,6 @@ let correctCount = 0
 let incorrectCount = 0
 let num1, num2, operator
 
-if (localStorage.getItem('laskupeliCorrect') !== null) {
-    correctCount = parseInt(localStorage.getItem('laskupeliCorrect'))
-    document.getElementById('laskupeli-correct').innerHTML = correctCount
-}
-
-if (localStorage.getItem('laskupeliIncorrect') !== null) {
-    incorrectCount = parseInt(localStorage.getItem('laskupeliIncorrect'))
-    document.getElementById('laskupeli-incorrect').innerHTML = incorrectCount
-} 
-
 const getRandomIntNumberInRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
@@ -50,13 +40,12 @@ function startGame() {
 
 function updateResults() {
     localStorage.setItem("laskupeliCorrect", correctCount)
-    localStorage.setItem('laskupeliIncorrect', incorrectCount);
-    document.getElementById('laskupeli-correct').textContent = correctCount;
-    document.getElementById('laskupeli-incorrect').textContent = incorrectCount;
+    localStorage.setItem('laskupeliIncorrect', incorrectCount)
 }
 
 function Lasku() {
     let result = Calculate(operator, num1, num2)
+    randomizeNumbers()
     let input = parseInt(document.getElementById("answer").value)
 
     if (Number(input) === result) {
@@ -80,9 +69,8 @@ function Lasku() {
 
         document.getElementById("answer").value = ""
     }
-    
+
     updateResults()
-    randomizeNumbers()
 }
 
 function Pelipiste() {
@@ -115,9 +103,33 @@ document.getElementById("submit").addEventListener("click", function () {
     Lasku()
 })
 
+document.getElementById("clear").addEventListener("click", function () {
+    tyhjennä()
+})
+
+
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault()
         Lasku()
     }
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateResults()
+    const laskupeliCorrect = document.getElementById('oikeatvastaukset');
+    const laskupeliIncorrect = document.getElementById('väärätvastaukset');
+    const laskupeliResults = {
+        correct: localStorage.getItem('laskupeliCorrect') || 0,
+        incorrect: localStorage.getItem('laskupeliIncorrect') || 0,
+    };
+    laskupeliCorrect.textContent = laskupeliResults.correct;
+    laskupeliIncorrect.textContent = laskupeliResults.incorrect;
+});
+
+function tyhjennä() {
+    localStorage.removeItem("laskupeliCorrect")
+    localStorage.removeItem("laskupeliIncorrect")
+    location.reload()
+}
