@@ -6,6 +6,16 @@ const getRandomIntNumberInRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+if (localStorage.getItem('laskupeliCorrect') !== null) {
+    correctCount = parseInt(localStorage.getItem('laskupeliCorrect'))
+    document.getElementById('oikeatvastaukset').innerHTML = correctCount
+}
+
+if (localStorage.getItem('laskupeliIncorrect') !== null) {
+    incorrectCount = parseInt(localStorage.getItem('laskupeliIncorrect'))
+    document.getElementById('väärätvastaukset').innerHTML = incorrectCount
+}
+
 function RandomOperator() {
     let operators = ["+", "-", "*"]
     let randomIndex = Math.floor(Math.random() * operators.length)
@@ -35,7 +45,7 @@ const randomizeNumbers = () => {
 }
 
 function startGame() {
-    randomizeNumbers()
+    randomizeNumbers();
 }
 
 function updateResults() {
@@ -116,17 +126,6 @@ document.addEventListener("keydown", function (event) {
     }
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-    updateResults()
-    const laskupeliCorrect = document.getElementById('oikeatvastaukset');
-    const laskupeliIncorrect = document.getElementById('väärätvastaukset');
-    const laskupeliResults = {
-        correct: localStorage.getItem('laskupeliCorrect') || 0,
-        incorrect: localStorage.getItem('laskupeliIncorrect') || 0,
-    };
-    laskupeliCorrect.textContent = laskupeliResults.correct;
-    laskupeliIncorrect.textContent = laskupeliResults.incorrect;
-});
 
 function tyhjennä() {
     localStorage.removeItem("laskupeliCorrect")
